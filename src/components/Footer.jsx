@@ -1,0 +1,68 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useLanguage } from '../utils/LanguageContext';
+import visitInfo from '../data/visitInfo';
+import './Footer.css';
+
+const Footer = () => {
+  const { language, t } = useLanguage();
+  const info = visitInfo.translations[language];
+
+  return (
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-grid">
+          <div className="footer-section">
+            <h4>{t('footer.address')}</h4>
+            <p className="footer-text">{info.address}</p>
+          </div>
+
+          <div className="footer-section">
+            <h4>{t('footer.hours')}</h4>
+            {info.hours.map((hour, index) => (
+              <p key={index} className="footer-text">{hour}</p>
+            ))}
+          </div>
+
+          <div className="footer-section">
+            <h4>{t('footer.contact')}</h4>
+            <p className="footer-text">
+              <a href={`mailto:${info.email}`}>{info.email}</a>
+            </p>
+            <p className="footer-text">
+              <a href={`tel:${info.phone.replace(/\s/g, '')}`}>{info.phone}</a>
+            </p>
+          </div>
+
+          <div className="footer-section">
+            <h4>{t('footer.follow')}</h4>
+            <div className="social-links">
+              <a
+                href="https://www.instagram.com/pontocruzporto/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://www.facebook.com/pontocruzporto/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                Facebook
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p className="copyright">{t('footer.copyright')}</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

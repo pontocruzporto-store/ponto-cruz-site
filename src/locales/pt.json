@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre Nós",
+    "brands": "Marcas",
+    "visit": "Visite-nos",
+    "porto": "Vale a Pena Visitar",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "tagline": "Autenticamente Português, Criteriosamente Selecionado",
+    "subtitle": "Uma concept store familiar celebrando o artesanato português e as tradições do Porto"
+  },
+  "footer": {
+    "address": "Morada",
+    "hours": "Horário",
+    "contact": "Contacto",
+    "follow": "Siga-nos",
+    "copyright": "© 2026 Ponto Cruz Concept Store. Todos os direitos reservados."
+  },
+  "home": {
+    "viewAll": "Ver tudo →",
+    "explorePorto": "Explorar o Porto →"
+  },
+  "about": {
+    "title": "A Nossa História",
+    "familyTitle": "Uma Empresa Familiar",
+    "portoTitle": "Raízes no Porto",
+    "craftsmanshipTitle": "Artesanato & Qualidade",
+    "philosophyTitle": "Filosofia de Curadoria",
+    "homeIntro": "A Ponto Cruz nasceu do amor de uma família portuense pelo artesanato e pelas tradições. Cada produto que selecionamos conta uma história de dedicação, qualidade e autenticidade portuguesa.",
+    "familyBody1": "A Ponto Cruz foi criada por Renato Cruz, juntamente com os pais, Susana e Joaquim. Enquanto a Susana se foca nos trabalhos manuais de artesã, o Joaquim assume o papel administrativo da loja e é também o responsável pelos contactos com os fornecedores.",
+    "familyBody2": "\"Os meus pais são a alma da loja, são eles que estão lá todos os dias a receber as pessoas. Eles conseguem transmitir a paixão por aquele espaço e por aquilo que fazemos\", partilha o Renato.",
+    "portoBody1": "Natural do Porto, é \"um orgulho\" ter uma loja na própria cidade. \"Tudo o que está lá foi feito pelas nossas próprias mãos. As paredes fomos nós que as erguemos, as mesas fomos nós que as construímos com pedaços de madeira, ou seja, tudo tem efetivamente um significado.\"",
+    "portoBody2": "A cidade inspira cada escolha que fazemos, desde os artesãos com quem trabalhamos até aos produtos que selecionamos para a nossa loja.",
+    "craftsmanshipBody1": "\"Tentamos ter o máximo de produtos feitos à mão por artesãos locais porque achamos que essa é a mais-valia. Os artesãos portugueses sempre foram o nosso foco.\"",
+    "craftsmanshipBody2": "Mantemos contacto direto com aqueles com quem trabalhamos e consideramos que é isso que nos define. Conhecemos toda a gente pelo nome e temos uma relação muito direta e honesta com os nossos fornecedores.",
+    "philosophyBody1": "O nosso lema é simples: \"Dar um pouco de Portugal e do Porto às pessoas que nos visitam.\" Cada produto que selecionamos conta uma história de dedicação, tradição e autenticidade.",
+    "philosophyBody2": "Procuramos sempre ter produtos portugueses, em especial do Porto quando possível, celebrando o melhor do nosso artesanato e das nossas tradições."
+  },
+  "brands": {
+    "title": "As Nossas Marcas",
+    "subtitle": "Artesãos e marcas portuguesas criteriosamente selecionadas",
+    "viewBrand": "Explorar Marca",
+    "origin": "Origem",
+    "philosophy": "Filosofia",
+    "productsTitle": "Produtos"
+  },
+  "visit": {
+    "title": "Visite-nos",
+    "address": "Morada",
+    "hours": "Horário",
+    "transport": "Como Chegar",
+    "parking": "Estacionamento",
+    "accessibility": "Acessibilidade",
+    "languages": "Línguas Faladas",
+    "nearbyTitle": "Pontos de referência próximos"
+  },
+  "porto": {
+    "title": "Definitivamente Vale a Pena Visitar",
+    "subtitle": "O nosso guia pessoal do Porto",
+    "filterAll": "Tudo",
+    "filterVisit": "O Que Visitar",
+    "filterEat": "Onde Comer",
+    "category": "Categoria",
+    "location": "Localização",
+    "tipLabel": "Dica:",
+    "directionsLabel": "Obter direções →"
+  },
+  "contact": {
+    "title": "Entre em Contacto",
+    "subtitle": "Tem alguma questão? Adoraríamos ouvir de si.",
+    "name": "Nome",
+    "email": "Email",
+    "message": "Mensagem",
+    "send": "Enviar Mensagem",
+    "success": "Mensagem enviada com sucesso!",
+    "error": "Erro ao enviar mensagem. Por favor, tente novamente."
+  },
+  "cookie": {
+    "message": "Utilizamos cookies para melhorar a sua experiência e analisar o tráfego do site. Ao aceitar, concorda com o uso de cookies.",
+    "accept": "Aceitar",
+    "decline": "Recusar",
+    "learn": "Saber Mais"
+  }
+}

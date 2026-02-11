@@ -1,0 +1,95 @@
+.visit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+}
+
+.map-container {
+  position: sticky;
+  top: calc(73px + var(--spacing-md));
+  height: 600px;
+  background: var(--color-grey-light);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.visit-info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.info-card {
+  background: var(--color-white);
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+}
+
+.info-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-black);
+  margin-bottom: var(--spacing-md);
+}
+
+.info-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-grey-mid);
+  margin-bottom: var(--spacing-sm);
+  white-space: pre-line;
+}
+
+.info-card p:last-child {
+  margin-bottom: 0;
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-card li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-grey-mid);
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.info-card li::before {
+  content: '•';
+  position: absolute;
+  left: 0.5rem;
+  color: var(--color-black);
+}
+
+.contact-info a {
+  color: var(--color-grey-mid);
+  transition: var(--transition);
+}
+
+.contact-info a:hover {
+  color: var(--color-black);
+}
+
+@media (max-width: 968px) {
+  .visit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-container {
+    position: relative;
+    top: 0;
+    height: 400px;
+    order: 2;
+  }
+
+  .visit-info-cards {
+    order: 1;
+  }
+}

@@ -1,0 +1,83 @@
+.page-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--color-grey-mid);
+  margin-top: var(--spacing-md);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.brands-grid-large {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.brand-card-large {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.brand-card-large:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-grey-mid);
+}
+
+.brand-card-image-large {
+  /* height: 500px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg);
+  background: var(--color-cream);
+}
+
+.brand-card-image-large img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.brand-card-info {
+  padding: var(--spacing-lg);
+  flex: 1;
+}
+
+.brand-card-info h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.brand-origin {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-grey-mid);
+  margin-bottom: var(--spacing-md);
+}
+
+.brand-tagline {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-grey-mid);
+  margin: 0;
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  color: var(--color-grey-mid);
+}
+
+@media (max-width: 768px) {
+  .brands-grid-large {
+    grid-template-columns: 1fr;
+  }
+}
