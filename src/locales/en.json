@@ -75,7 +75,14 @@
     "message": "Message",
     "send": "Send Message",
     "success": "Message sent successfully!",
-    "error": "Error sending message. Please try again."
+    "error": "Error sending message. Please try again.",
+    "sending": "Sending...",
+    "visitUsTitle": "Visit Us",
+    "openingHoursTitle": "Opening Hours",
+    "getInTouchTitle": "Get in Touch",
+    "followUsTitle": "Follow Us",
+    "instagram": "Instagram",
+    "facebook": "Facebook"
   },
   "cookie": {
     "message": "We use cookies to improve your experience and analyze site traffic. By accepting, you agree to our use of cookies.",

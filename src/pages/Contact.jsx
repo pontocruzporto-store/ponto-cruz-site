@@ -105,7 +105,7 @@ const Contact = () => {
                   className="button"
                   disabled={status === 'sending'}
                 >
-                  {status === 'sending' ? 'Sending...' : t('contact.send')}
+                  {status === 'sending' ? t('contact.sending') : t('contact.send')}
                 </button>
 
                 {status === 'success' && (
@@ -120,19 +120,19 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="contact-info-wrapper">
               <div className="contact-info-card">
-                <h3>Visit Us</h3>
+                <h3>{t('contact.visitUsTitle')}</h3>
                 <p>{info.address}</p>
               </div>
 
               <div className="contact-info-card">
-                <h3>Opening Hours</h3>
+                <h3>{t('contact.openingHoursTitle')}</h3>
                 {info.hours.map((hour, index) => (
                   <p key={index}>{hour}</p>
                 ))}
               </div>
 
               <div className="contact-info-card">
-                <h3>Get in Touch</h3>
+                <h3>{t('contact.getInTouchTitle')}</h3>
                 <p>
                   <a href={`mailto:${info.email}`}>{info.email}</a><br />
                   <a href={`tel:${info.phone.replace(/\s/g, '')}`}>{info.phone}</a>
@@ -140,21 +140,21 @@ const Contact = () => {
               </div>
 
               <div className="contact-info-card">
-                <h3>Follow Us</h3>
+                <h3>{t('contact.followUsTitle')}</h3>
                 <div className="social-links-vertical">
                   <a
                     href="https://www.instagram.com/pontocruzporto/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Instagram
+                    {t('contact.instagram')}
                   </a>
                   <a
                     href="https://www.facebook.com/pontocruzporto/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Facebook
+                    {t('contact.facebook')}
                   </a>
                 </div>
               </div>

@@ -75,7 +75,14 @@
     "message": "메시지",
     "send": "메시지 보내기",
     "success": "메시지가 성공적으로 전송되었습니다!",
-    "error": "메시지 전송 중 오류가 발생했습니다. 다시 시도해 주세요."
+    "error": "메시지 전송 중 오류가 발생했습니다. 다시 시도해 주세요.",
+    "sending": "전송 중...",
+    "visitUsTitle": "방문 안내",
+    "openingHoursTitle": "영업시간",
+    "getInTouchTitle": "문의하기",
+    "followUsTitle": "팔로우",
+    "instagram": "인스타그램",
+    "facebook": "페이스북"
   },
   "cookie": {
     "message": "사용자 경험 개선 및 사이트 트래픽 분석을 위해 쿠키를 사용합니다. 수락하시면 쿠키 사용에 동의하는 것입니다.",

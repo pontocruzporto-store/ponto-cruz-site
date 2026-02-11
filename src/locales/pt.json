@@ -75,7 +75,14 @@
     "message": "Mensagem",
     "send": "Enviar Mensagem",
     "success": "Mensagem enviada com sucesso!",
-    "error": "Erro ao enviar mensagem. Por favor, tente novamente."
+    "error": "Erro ao enviar mensagem. Por favor, tente novamente.",
+    "sending": "A enviar...",
+    "visitUsTitle": "Visite-nos",
+    "openingHoursTitle": "Horário",
+    "getInTouchTitle": "Fale connosco",
+    "followUsTitle": "Siga-nos",
+    "instagram": "Instagram",
+    "facebook": "Facebook"
   },
   "cookie": {
     "message": "Utilizamos cookies para melhorar a sua experiência e analisar o tráfego do site. Ao aceitar, concorda com o uso de cookies.",
