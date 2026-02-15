@@ -17,7 +17,7 @@ const Home = () => {
       <section className="hero">
         <div className="hero-image">
           <img 
-            src="/images/hero/hero-image.png" 
+            src="/images/hero/hero-image.webp" 
             alt="Ponto Cruz Concept Store"
           />
         </div>
@@ -33,7 +33,7 @@ const Home = () => {
           <div className="about-preview-grid">
             <div className="about-preview-image">
               <img 
-                src="/images/hero/about-image.jpeg" 
+                src="/images/hero/about-image.webp" 
                 alt="Store interior"
               />
             </div>

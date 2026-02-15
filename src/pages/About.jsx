@@ -24,7 +24,7 @@ const About = () => {
                 <p>{t('about.familyBody2')}</p>
               </div>
               <div className="about-image">
-                <img src="/images/hero/about-image.jpeg" alt="Family" />
+                <img src="/images/hero/about-image.webp" alt="Family" />
               </div>
             </div>
 
@@ -36,7 +36,7 @@ const About = () => {
                 <p>{t('about.portoBody2')}</p>
               </div>
               <div className="about-image">
-                <img src="/images/hero/porto_photo.jpg" alt="Porto" />
+                <img src="/images/hero/porto_photo.webp" alt="Porto" />
               </div>
             </div>
 
@@ -48,7 +48,7 @@ const About = () => {
                 <p>{t('about.craftsmanshipBody2')}</p>
               </div>
               <div className="about-image">
-                <img src="/images/hero/artesanato_photo.jpg" alt="Craftsmanship" />
+                <img src="/images/hero/artesanato_photo.webp" alt="Craftsmanship" />
               </div>
             </div>
 
@@ -60,7 +60,7 @@ const About = () => {
                 <p>{t('about.philosophyBody2')}</p>
               </div>
               <div className="about-image">
-                <img src="/images/hero/ponte_photo.jpg" alt="Store detail" />
+                <img src="/images/hero/ponte_photo.webp" alt="Store detail" />
               </div>
             </div>
           </div>

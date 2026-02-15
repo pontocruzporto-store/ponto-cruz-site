@@ -39,8 +39,8 @@
 export default [
   {
     "slug": "essencias-portugal",
-    "logo": "/images/brands/creme_ept.png",
-    "card-image":  "/images/products/essencias_pt/product_creme_ept.png",
+    "logo": "/images/brands/creme_ept.webp",
+    "card-image":  "/images/products/essencias_pt/product_creme_ept.webp",
     "featured": true,
     "translations": {
       "pt": {
@@ -161,8 +161,8 @@ export default [
     ]
   },{
     "slug": "minerva",
-    "logo": "/images/brands/sardinha_min.png",
-    "card-image":  "/images/products/minerva/product_lata_min.png",
+    "logo": "/images/brands/sardinha_min.webp",
+    "card-image":  "/images/products/minerva/product_lata_min.webp",
     "featured": true,
     "translations": {
       "pt": {
@@ -232,8 +232,8 @@ export default [
     ]
   },{
     "slug": "maria-carmo",
-    "logo": "/images/brands/brincos_mc.png",
-    "card-image":  "/images/products/maria_carmo/product_brincos_mc.png",
+    "logo": "/images/brands/brincos_mc.webp",
+    "card-image":  "/images/products/maria_carmo/product_brincos_mc.webp",
     "featured": true,
     "translations": {
       "pt": {
@@ -321,7 +321,7 @@ export default [
   },
   {
     "slug": "ana-willerding",
-    "logo": "/images/brands/brincos_aw.png",
+    "logo": "/images/brands/brincos_aw.webp",
     "card-image":  "/images/products/ana_willerding/product_brincos_aw.png",
     "featured": true,
     "translations": {
@@ -466,7 +466,7 @@ export default [
     ]
   },{
     "slug": "azulejo-quadrado",
-    "logo": "/images/brands/azulejo_aq.png",
+    "logo": "/images/brands/azulejo_aq.webp",
     "card-image":  "/images/products/azulejo_quadrado/product_azulejo_aq.png",
     "featured": true,
     "translations": {
@@ -520,7 +520,7 @@ export default [
     ]
   },{
     "slug": "fatima-cunha",
-    "logo": "/images/brands/mochila_fc.png",
+    "logo": "/images/brands/mochila_fc.webp",
     "card-image":  "/images/products/azulejo_quadrado/product_azulejo_aq.png",
     "featured": true,
     "translations": {
@@ -608,7 +608,7 @@ export default [
     ]
   },{
     "slug": "illustrart",
-    "logo": "/images/brands/sardinha_ill.png",
+    "logo": "/images/brands/sardinha_ill.webp",
     "card-image":  "/images/products/azulejo_quadrado/product_azulejo_aq.png",
     "featured": true,
     "translations": {
@@ -730,7 +730,7 @@ export default [
     ]
   },{
     "slug": "meia-mania",
-    "logo": "/images/brands/meias_mm.png",
+    "logo": "/images/brands/meias_mm.webp",
     "card-image":  "/images/products/azulejo_quadrado/product_azulejo_aq.png",
     "featured": true,
     "translations": {
@@ -784,7 +784,7 @@ export default [
     ]
   },{
     "slug": "portugal-bag",
-    "logo": "/images/brands/caderno_piab.png",
+    "logo": "/images/brands/caderno_piab.webp",
     "card-image":  "/images/products/azulejo_quadrado/product_azulejo_aq.png",
     "featured": true,
     "translations": {
@@ -889,7 +889,7 @@ export default [
     ]
   },{
     "slug": "captain-socks",
-    "logo": "/images/brands/meias_cs.png",
+    "logo": "/images/brands/meias_cs.webp",
     "card-image":  "/images/products/azulejo_quadrado/product_azulejo_aq.png",
     "featured": true,
     "translations": {
@@ -960,7 +960,7 @@ export default [
     ]
   },{
     "slug": "zuzu",
-    "logo": "/images/brands/pendente_zuzu.png",
+    "logo": "/images/brands/pendente_zuzu.webp",
     "card-image":  "/images/products/azulejo_quadrado/product_azulejo_aq.png",
     "featured": true,
     "translations": {
@@ -1031,7 +1031,7 @@ export default [
     ]
   },{
     "slug": "porto-tiles",
-    "logo": "/images/brands/azulejo_pt.png",
+    "logo": "/images/brands/azulejo_pt.webp",
     "card-image":  "/images/products/azulejo_quadrado/product_azulejo_aq.png",
     "featured": true,
     "translations": {
@@ -1102,7 +1102,7 @@ export default [
     ]
   },{
     "slug": "beeju-clay",
-    "logo": "/images/brands/brincos_bc.png",
+    "logo": "/images/brands/brincos_bc.webp",
     "card-image":  "/images/products/azulejo_quadrado/product_azulejo_aq.png",
     "featured": true,
     "translations": {
@@ -1156,7 +1156,7 @@ export default [
     ]
   },{
     "slug": "isabel-igrejas",
-    "logo": "/images/brands/boneca_ii.png",
+    "logo": "/images/brands/boneca_ii.webp",
     "card-image":  "/images/products/azulejo_quadrado/product_azulejo_aq.png",
     "featured": true,
     "translations": {
@@ -1244,8 +1244,8 @@ export default [
     ]
   },{
     "slug": "ponto-cruz",
-    "logo": "/images/brands/tote_loja.png",
-    "card-image":  "/images/products/azulejo_quadrado/product_azulejo_aq.png",
+    "logo": "/images/brands/tote_loja.webp",
+    "card-image":  "/images/products/azulejo_quadrado/product_azulejo_aq.webp",
     "featured": true,
     "translations": {
       "pt": {
@@ -1417,7 +1417,7 @@ export default [
     ]
   },{
     "slug": "studio-nativo",
-    "logo": "/images/brands/postal_sn.png",
+    "logo": "/images/brands/postal_sn.webp",
     "card-image":  "/images/products/azulejo_quadrado/product_azulejo_aq.png",
     "featured": true,
    "translations": {
