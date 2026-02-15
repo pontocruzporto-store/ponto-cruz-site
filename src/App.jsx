@@ -13,6 +13,7 @@ import BrandDetail from './pages/BrandDetail';
 import Visit from './pages/Visit';
 import Porto from './pages/Porto';
 import Contact from './pages/Contact';
+import Sitemap from './pages/Sitemap';
 import './styles/global.css';
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
               <Route path="/pt/visit" element={<Visit />} />
               <Route path="/pt/porto" element={<Porto />} />
               <Route path="/pt/contact" element={<Contact />} />
+              <Route path="/pt/sitemap" element={<Sitemap />} />
               
               {/* English routes */}
               <Route path="/en" element={<Home />} />
@@ -49,6 +51,7 @@ function App() {
               <Route path="/en/visit" element={<Visit />} />
               <Route path="/en/porto" element={<Porto />} />
               <Route path="/en/contact" element={<Contact />} />
+              <Route path="/en/sitemap" element={<Sitemap />} />
               
               {/* Korean routes */}
               <Route path="/ko" element={<Home />} />
@@ -58,6 +61,7 @@ function App() {
               <Route path="/ko/visit" element={<Visit />} />
               <Route path="/ko/porto" element={<Porto />} />
               <Route path="/ko/contact" element={<Contact />} />
+              <Route path="/ko/sitemap" element={<Sitemap />} />
               
               {/* Japanese routes */}
               <Route path="/ja" element={<Home />} />
@@ -67,10 +71,11 @@ function App() {
               <Route path="/ja/visit" element={<Visit />} />
               <Route path="/ja/porto" element={<Porto />} />
               <Route path="/ja/contact" element={<Contact />} />
+              <Route path="/ja/sitemap" element={<Sitemap />} />
               
               {/* Catch all - redirect to Portuguese home */}
               <Route path="*" element={<Navigate to="/pt" replace />} />
-              </Routes>
+            </Routes>
           </main>
           <Footer />
           <CookieConsent />

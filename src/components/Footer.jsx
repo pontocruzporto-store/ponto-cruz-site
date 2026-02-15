@@ -58,7 +58,13 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p className="copyright">{t('footer.copyright')}</p>
+          <p className="copyright">
+            {t('footer.copyright')}
+            {' · '}
+            <Link to={`/${language}/sitemap`}>
+              {language === 'pt' ? 'Mapa do site' : language === 'en' ? 'Sitemap' : language === 'ko' ? '사이트맵' : 'サイトマップ'}
+            </Link>
+          </p>
         </div>
       </div>
     </footer>

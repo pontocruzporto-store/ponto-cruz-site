@@ -8,7 +8,7 @@ const __dirname = dirname(__filename);
 
 const BASE_URL = 'https://pontocruzconceptstore.pt';
 const LANGS = ['pt', 'en', 'ko', 'ja'];
-const STATIC_PATHS = ['', '/about', '/brands', '/visit', '/porto', '/contact'];
+const STATIC_PATHS = ['', '/about', '/brands', '/visit', '/porto', '/contact', '/sitemap'];
 
 const today = new Date().toISOString().slice(0, 10);
 

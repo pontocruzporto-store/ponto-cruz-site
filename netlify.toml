@@ -2,6 +2,39 @@
   command = "npm run build"
   publish = "dist"
 
+# Canonical URL: force HTTPS and non-www
+[[redirects]]
+  from = "http://pontocruzconceptstore.pt/*"
+  to = "https://pontocruzconceptstore.pt/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.pontocruzconceptstore.pt/*"
+  to = "https://pontocruzconceptstore.pt/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.pontocruzconceptstore.pt/*"
+  to = "https://pontocruzconceptstore.pt/:splat"
+  status = 301
+  force = true
+
+# Sitemap XML (must be before SPA fallback)
+[[redirects]]
+  from = "/sitemap_index.xml"
+  to = "/sitemap_index.xml"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
+  force = true
+
+# SPA fallback
 [[redirects]]
   from = "/*"
   to = "/index.html"

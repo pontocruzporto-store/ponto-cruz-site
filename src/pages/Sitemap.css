@@ -1,0 +1,14 @@
+.sitemap-page .sitemap-list {
+    list-style: none;
+    padding: 0;
+  }
+  .sitemap-page .sitemap-list li {
+    margin-bottom: 0.5rem;
+  }
+  .sitemap-page .sitemap-list a:hover {
+    text-decoration: underline;
+  }
+  .sitemap-page h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }

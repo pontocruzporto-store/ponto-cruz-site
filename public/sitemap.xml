@@ -37,6 +37,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://pontocruzconceptstore.pt/pt/sitemap</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://pontocruzconceptstore.pt/pt/brands/essencias-portugal</loc>
     <lastmod>2026-02-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -164,6 +170,12 @@
   </url>
   <url>
     <loc>https://pontocruzconceptstore.pt/en/contact</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pontocruzconceptstore.pt/en/sitemap</loc>
     <lastmod>2026-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -301,6 +313,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://pontocruzconceptstore.pt/ko/sitemap</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://pontocruzconceptstore.pt/ko/brands/essencias-portugal</loc>
     <lastmod>2026-02-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -428,6 +446,12 @@
   </url>
   <url>
     <loc>https://pontocruzconceptstore.pt/ja/contact</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pontocruzconceptstore.pt/ja/sitemap</loc>
     <lastmod>2026-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
