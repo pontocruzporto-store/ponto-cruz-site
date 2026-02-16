@@ -18,7 +18,7 @@ const Home = () => {
         <div className="hero-image">
           <img 
             src="/images/hero/hero-image.webp" 
-            alt="Ponto Cruz Concept Store"
+            alt="Authentic Souvenir & Concept Store in Porto"
           />
         </div>
         <div className="hero-content">
@@ -82,7 +82,7 @@ const Home = () => {
         </section>
       )}
 
-      {/* Porto Recommendations Preview
+      Porto Recommendations Preview
       {featuredPlaces.length > 0 && (
         <section className="section porto-preview">
           <div className="container">
@@ -113,7 +113,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-      )} */}
+      )}
 
       {/* Visit CTA */}
       <section className="section visit-cta">
