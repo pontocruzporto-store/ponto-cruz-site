@@ -82,7 +82,7 @@ const Home = () => {
         </section>
       )}
 
-      Porto Recommendations Preview
+      {/* Porto Recommendations Preview */}
       {featuredPlaces.length > 0 && (
         <section className="section porto-preview">
           <div className="container">
