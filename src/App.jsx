@@ -14,6 +14,8 @@ import Visit from './pages/Visit';
 import Porto from './pages/Porto';
 import Contact from './pages/Contact';
 import Sitemap from './pages/Sitemap';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import Canonical from './components/Canonical';
 import './styles/global.css';
 
@@ -44,6 +46,8 @@ function App() {
                 <Route path="/pt/visit" element={<Visit />} />
                 <Route path="/pt/porto" element={<Porto />} />
                 <Route path="/pt/contact" element={<Contact />} />
+                <Route path="/pt/blog" element={<Blog />} />
+                <Route path="/pt/blog/:slug" element={<BlogPost />} />
                 <Route path="/pt/sitemap" element={<Sitemap />} />
                 
                 {/* English routes */}
@@ -54,6 +58,8 @@ function App() {
                 <Route path="/en/visit" element={<Visit />} />
                 <Route path="/en/porto" element={<Porto />} />
                 <Route path="/en/contact" element={<Contact />} />
+                <Route path="/en/blog" element={<Blog />} />
+                <Route path="/en/blog/:slug" element={<BlogPost />} />
                 <Route path="/en/sitemap" element={<Sitemap />} />
                 
                 {/* Korean routes */}
@@ -64,6 +70,8 @@ function App() {
                 <Route path="/ko/visit" element={<Visit />} />
                 <Route path="/ko/porto" element={<Porto />} />
                 <Route path="/ko/contact" element={<Contact />} />
+                <Route path="/ko/blog" element={<Blog />} />
+                <Route path="/ko/blog/:slug" element={<BlogPost />} />
                 <Route path="/ko/sitemap" element={<Sitemap />} />
                 
                 {/* Japanese routes */}
@@ -74,6 +82,8 @@ function App() {
                 <Route path="/ja/visit" element={<Visit />} />
                 <Route path="/ja/porto" element={<Porto />} />
                 <Route path="/ja/contact" element={<Contact />} />
+                <Route path="/ja/blog" element={<Blog />} />
+                <Route path="/ja/blog/:slug" element={<BlogPost />} />
                 <Route path="/ja/sitemap" element={<Sitemap />} />
                 
                 {/* Catch all - redirect to Portuguese home */}

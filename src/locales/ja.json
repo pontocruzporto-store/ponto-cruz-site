@@ -5,8 +5,15 @@
     "brands": "ブランド",
     "visit": "ご来店案内",
     "porto": "ぜひ訪れたい場所",
+    "blog": "ブログ",
     "contact": "お問い合わせ",
     "sitemap": "サイトマップ"
+  },
+  "blog": {
+    "title": "ブログ",
+    "subtitle": "Ponto Cruzの記事とお知らせ",
+    "empty": "まだ記事はありません。",
+    "backToBlog": "ブログに戻る"
   },
   "hero": {
     "tagline": "本物のポルトガル品質、厳選された逸品",

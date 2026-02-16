@@ -5,8 +5,15 @@
     "brands": "Marcas",
     "visit": "Visite-nos",
     "porto": "Vale a Pena Visitar",
+    "blog": "Blog",
     "contact": "Contacto",
     "sitemap": "Mapa do site"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Artigos e novidades da Ponto Cruz",
+    "empty": "Ainda não há artigos.",
+    "backToBlog": "Voltar ao blog"
   },
   "hero": {
     "tagline": "Autenticamente Português, Criteriosamente Selecionado",

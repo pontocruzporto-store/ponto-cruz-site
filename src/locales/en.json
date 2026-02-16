@@ -5,8 +5,15 @@
     "brands": "Brands",
     "visit": "Visit Us",
     "porto": "Definitely Worth the Visit",
+    "blog": "Blog",
     "contact": "Contact",
     "sitemap": "Sitemap"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Articles and news from Ponto Cruz",
+    "empty": "No articles yet.",
+    "backToBlog": "Back to blog"
   },
   "hero": {
     "tagline": "Authentically Portuguese, Carefully Selected",

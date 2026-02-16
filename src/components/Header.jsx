@@ -28,6 +28,7 @@ const Header = () => {
     { key: 'brands', path: `/${language}/brands` },
     { key: 'visit', path: `/${language}/visit` },
     // { key: 'porto', path: `/${language}/porto` },
+    { key: 'blog', path: `/${language}/blog` },
     { key: 'contact', path: `/${language}/contact` }
   ];
 

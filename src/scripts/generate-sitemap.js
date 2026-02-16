@@ -2,13 +2,14 @@ import { writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import brandsData from '../data/brands.js';
+import blogData from '../data/blog.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const BASE_URL = 'https://pontocruzconceptstore.pt';
 const LANGS = ['pt', 'en', 'ko', 'ja'];
-const STATIC_PATHS = ['', '/about', '/brands', '/visit', '/porto', '/contact', '/sitemap'];
+const STATIC_PATHS = ['', '/about', '/brands', '/visit', '/porto', '/contact', '/blog', '/sitemap'];
 
 const today = new Date().toISOString().slice(0, 10);
 
@@ -19,6 +20,9 @@ for (const lang of LANGS) {
   }
   for (const brand of brandsData) {
     urls.push({ loc: `${BASE_URL}/${lang}/brands/${brand.slug}`, lastmod: today });
+  }
+  for (const post of blogData) {
+    urls.push({ loc: `${BASE_URL}/${lang}/blog/${post.slug}`, lastmod: today });
   }
 }
 
