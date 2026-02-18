@@ -6,7 +6,9 @@
   z-index: 1000;
   background: var(--color-cream);
   border-bottom: 1px solid transparent;
-  transition: var(--transition);
+  transition:
+    border-bottom-color var(--transition),
+    box-shadow var(--transition);
 }
 
 .header.scrolled {
@@ -24,11 +26,11 @@
 }
 
 .logo img {
-  height: 48px; /* main header size */
-  max-height: 48px; /* safety so it never exceeds header height */
+  height: 48px;
+  max-height: 48px;
   width: auto;
   object-fit: contain;
-  transition: var(--transition);
+  transition: opacity var(--transition);
 }
 
 .logo:hover img {
@@ -49,27 +51,37 @@
   color: var(--color-grey-mid);
   position: relative;
   padding: 0.5rem 0;
+  /* Use opacity instead of color for the active/hover state change */
+  transition: opacity var(--transition);
 }
 
+/* Dim inactive links; hover/active restores full opacity */
+.nav-link {
+  opacity: 0.6;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  opacity: 1;
+}
+
+/* Underline: use transform:scaleX instead of width — GPU composited, no CLS */
 .nav-link::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 0;
+  width: 100%; /* always full width */
   height: 1px;
   background: var(--color-black);
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: var(--color-black);
+  transform: scaleX(0); /* hidden by default */
+  transform-origin: left center;
+  transition: transform 0.3s ease;
 }
 
 .nav-link.active::after,
 .nav-link:hover::after {
-  width: 100%;
+  transform: scaleX(1); /* revealed on hover/active */
 }
 
 .header-actions {
@@ -95,7 +107,9 @@
   background: transparent;
   color: var(--color-grey-mid);
   cursor: pointer;
-  transition: var(--transition);
+  transition:
+    background var(--transition),
+    color var(--transition);
 }
 
 .lang-button:hover,
@@ -118,7 +132,9 @@
   width: 24px;
   height: 2px;
   background: var(--color-black);
-  transition: var(--transition);
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
 }
 
 @media (max-width: 968px) {
@@ -135,7 +151,10 @@
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease,
+      visibility 0.3s ease;
   }
 
   .nav.open {
@@ -147,6 +166,12 @@
   .nav-link {
     padding: var(--spacing-sm) 0;
     border-bottom: 1px solid var(--color-border);
+    opacity: 0.6;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    opacity: 1;
   }
 
   .nav-link:last-child {

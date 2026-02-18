@@ -11,8 +11,8 @@
   --color-border: #e8e6e3;
 
   /* Typography */
-  --font-serif: "Cormorant Garamond", serif;
-  --font-sans: "Work Sans", sans-serif;
+  --font-serif: "Cormorant Garamond", "Garamond", "Georgia", serif;
+  --font-sans: "Work Sans", "Helvetica Neue", "Arial", sans-serif;
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -26,8 +26,8 @@
   --max-width: 1400px;
   --content-width: 900px;
 
-  /* Transitions */
-  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Transitions - avoid 'all' to prevent non-composited animation warnings */
+  --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -90,7 +90,8 @@ p {
 a {
   color: inherit;
   text-decoration: none;
-  transition: var(--transition);
+  /* Only transition opacity/transform — composited properties only */
+  transition: opacity var(--transition);
 }
 
 img {
@@ -112,7 +113,9 @@ button,
   background: transparent;
   color: var(--color-black);
   cursor: pointer;
-  transition: var(--transition);
+  transition:
+    background var(--transition),
+    color var(--transition);
   position: relative;
   overflow: hidden;
 }
