@@ -7,25 +7,23 @@ const OptimizedImage = ({
   loading = "lazy",
   fetchpriority = "auto",
   sizes = "100vw",
+  width,
+  height,
+  isLogo = false,
   style = {},
   ...props
 }) => {
-  // Se a imagem já tiver tamanho específico, não modificar
-  const hasSpecificSize =
-    src.includes("-400.") || src.includes("-800.") || src.includes("-1200.");
+  const baseName = src.replace(/-(100|200|400|800|1200)(\.[^.]+)$/, "");
 
-  // Gerar srcSet apenas para imagens base
-  const getSrcSet = (baseSrc) => {
-    if (hasSpecificSize) return null; // Já tem tamanho específico
+  let srcSet, defaultSrc;
 
-    const name = baseSrc.replace(/\.[^/.]+$/, "");
-    return `${name}-400.webp 400w, ${name}-800.webp 800w, ${name}-1200.webp 1200w`;
-  };
-
-  const srcSet = getSrcSet(src);
-  const defaultSrc = hasSpecificSize
-    ? src
-    : src.replace(/\.[^/.]+$/, "-800.webp");
+  if (isLogo) {
+    srcSet = `${baseName}-100.webp 100w, ${baseName}-200.webp 200w, ${baseName}-400.webp 400w`;
+    defaultSrc = `${baseName}-200.webp`;
+  } else {
+    srcSet = `${baseName}-400.webp 400w, ${baseName}-800.webp 800w, ${baseName}-1200.webp 1200w`;
+    defaultSrc = `${baseName}-800.webp`;
+  }
 
   return (
     <img
@@ -38,6 +36,8 @@ const OptimizedImage = ({
       loading={loading}
       decoding="async"
       fetchpriority={fetchpriority}
+      width={width}
+      height={height}
       {...props}
     />
   );

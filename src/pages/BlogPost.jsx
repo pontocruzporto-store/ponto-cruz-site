@@ -62,6 +62,8 @@ const BlogPost = () => {
                 src={post.image}
                 alt={content.title}
                 sizes="(max-width: 768px) 100vw, 900px"
+                width={1200}
+                height={800}
               />
             </div>
           )}

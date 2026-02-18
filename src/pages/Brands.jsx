@@ -36,6 +36,8 @@ const Brands = () => {
                       src={brand.logo}
                       alt={brand.translations[language].name}
                       sizes="(max-width: 768px) 100vw, 25vw"
+                      width={400}
+                      height={400}
                     />
                   </div>
                   <div className="brand-card-info">

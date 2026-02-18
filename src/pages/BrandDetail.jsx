@@ -27,6 +27,8 @@ const BrandDetail = () => {
                 src={brand.logo}
                 alt={content.name}
                 sizes="(max-width: 768px) 200px, 300px"
+                width={300}
+                height={300}
               />
             </div>
             <h1>{content.name}</h1>

@@ -9,10 +9,8 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ["react", "react-dom"],
-          router: ["react-router-dom"],
+          vendor: ["react", "react-dom", "react-router-dom"],
           markdown: ["react-markdown", "remark-gfm"],
-          analytics: ["react-ga4", "react-helmet-async"],
         },
       },
     },

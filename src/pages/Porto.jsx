@@ -60,6 +60,8 @@ const Porto = () => {
                       src={place.image}
                       alt={place.translations[language].name}
                       sizes="(max-width: 768px) 100vw, 33vw"
+                      width={800}
+                      height={600}
                     />
                     <span className="place-category-badge">
                       {t(

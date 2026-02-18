@@ -29,6 +29,8 @@ const About = () => {
                   src="/images/hero/about-image-1200.webp"
                   alt="Family"
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  width={800}
+                  height={600}
                 />
               </div>
             </div>
@@ -42,9 +44,11 @@ const About = () => {
               </div>
               <div className="about-image">
                 <OptimizedImage
-                  src="/images/hero/porto_photo.webp"
+                  src="/images/hero/porto_photo-1200.webp"
                   alt="Porto"
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  width={800}
+                  height={600}
                 />
               </div>
             </div>
@@ -58,9 +62,11 @@ const About = () => {
               </div>
               <div className="about-image">
                 <OptimizedImage
-                  src="/images/hero/artesanato_photo.webp"
+                  src="/images/hero/artesanato_photo-1200.webp"
                   alt="Craftsmanship"
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  width={800}
+                  height={600}
                 />
               </div>
             </div>
@@ -74,9 +80,11 @@ const About = () => {
               </div>
               <div className="about-image">
                 <OptimizedImage
-                  src="/images/hero/ponte_photo.webp"
+                  src="/images/hero/ponte_photo-1200.webp"
                   alt="Store detail"
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  width={800}
+                  height={600}
                 />
               </div>
             </div>

@@ -56,12 +56,10 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 0;
   height: 1px;
   background: var(--color-black);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover,
@@ -71,7 +69,7 @@
 
 .nav-link.active::after,
 .nav-link:hover::after {
-  transform: scaleX(1);
+  width: 100%;
 }
 
 .header-actions {

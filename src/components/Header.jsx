@@ -48,6 +48,11 @@ const Header = () => {
             src="/logo-simple-400.webp"
             alt="Ponto Cruz"
             sizes="120px"
+            loading="eager"
+            fetchpriority="high"
+            isLogo={true}
+            width={120}
+            height={128}
           />
         </Link>
 

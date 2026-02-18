@@ -27,6 +27,8 @@ const Home = () => {
             loading="eager"
             fetchpriority="high"
             sizes="100vw"
+            width={1200}
+            height={800}
           />
         </div>
         <div className="hero-content">
@@ -44,6 +46,8 @@ const Home = () => {
                 src="/images/hero/about-image-1200.webp"
                 alt="Store interior"
                 sizes="(max-width: 768px) 100vw, 50vw"
+                width={800}
+                height={600}
               />
             </div>
             <div className="about-preview-content">
@@ -79,6 +83,8 @@ const Home = () => {
                       src={brand["card-image"]}
                       alt={brand.translations[language].name}
                       sizes="(max-width: 768px) 100vw, 33vw"
+                      width={800}
+                      height={600}
                     />
                   </div>
                   <h3>{brand.translations[language].name}</h3>
@@ -108,6 +114,8 @@ const Home = () => {
                       src={place.image}
                       alt={place.translations[language].name}
                       sizes="(max-width: 768px) 100vw, 33vw"
+                      width={800}
+                      height={600}
                     />
                   </div>
                   <div className="place-card-content">

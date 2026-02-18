@@ -1,4 +1,4 @@
-import React, { useEffect, lazy, Suspense } from "react";
+import React, { useEffect, Suspense, lazy } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -14,21 +14,20 @@ import ScrollToTop from "./components/ScrollToTop";
 import Canonical from "./components/Canonical";
 import "./styles/global.css";
 
-// Lazy load pages
-const Home = lazy(() => import("./pages/Home"));
+import Home from "./pages/Home";
+import Visit from "./pages/Visit";
+import Contact from "./pages/Contact";
+import Sitemap from "./pages/Sitemap";
+
 const About = lazy(() => import("./pages/About"));
 const Brands = lazy(() => import("./pages/Brands"));
 const BrandDetail = lazy(() => import("./pages/BrandDetail"));
-const Visit = lazy(() => import("./pages/Visit"));
 const Porto = lazy(() => import("./pages/Porto"));
-const Contact = lazy(() => import("./pages/Contact"));
-const Sitemap = lazy(() => import("./pages/Sitemap"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 
 function App() {
   useEffect(() => {
-    // Log page views for analytics
     logPageView(window.location.pathname);
   }, []);
 
@@ -36,32 +35,15 @@ function App() {
     <Router>
       <LanguageProvider>
         <Canonical />
-        <ScrollToTop /> {/* add this line */}
+        <ScrollToTop />
         <div className="app">
           <Header />
           <main>
             <div className="main-inner">
-              <Suspense
-                fallback={
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      minHeight: "200px",
-                      fontSize: "1.2rem",
-                      color: "#666",
-                    }}
-                  >
-                    Loading...
-                  </div>
-                }
-              >
+              <Suspense fallback={<div style={{ minHeight: "60vh" }} />}>
                 <Routes>
-                  {/* Redirect root to Portuguese */}
                   <Route path="/" element={<Navigate to="/pt" replace />} />
 
-                  {/* Portuguese routes */}
                   <Route path="/pt" element={<Home />} />
                   <Route path="/pt/about" element={<About />} />
                   <Route path="/pt/brands" element={<Brands />} />
@@ -73,7 +55,6 @@ function App() {
                   <Route path="/pt/blog/:slug" element={<BlogPost />} />
                   <Route path="/pt/sitemap" element={<Sitemap />} />
 
-                  {/* English routes */}
                   <Route path="/en" element={<Home />} />
                   <Route path="/en/about" element={<About />} />
                   <Route path="/en/brands" element={<Brands />} />
@@ -85,7 +66,6 @@ function App() {
                   <Route path="/en/blog/:slug" element={<BlogPost />} />
                   <Route path="/en/sitemap" element={<Sitemap />} />
 
-                  {/* Korean routes */}
                   <Route path="/ko" element={<Home />} />
                   <Route path="/ko/about" element={<About />} />
                   <Route path="/ko/brands" element={<Brands />} />
@@ -97,7 +77,6 @@ function App() {
                   <Route path="/ko/blog/:slug" element={<BlogPost />} />
                   <Route path="/ko/sitemap" element={<Sitemap />} />
 
-                  {/* Japanese routes */}
                   <Route path="/ja" element={<Home />} />
                   <Route path="/ja/about" element={<About />} />
                   <Route path="/ja/brands" element={<Brands />} />
@@ -109,7 +88,6 @@ function App() {
                   <Route path="/ja/blog/:slug" element={<BlogPost />} />
                   <Route path="/ja/sitemap" element={<Sitemap />} />
 
-                  {/* Catch all - redirect to Portuguese home */}
                   <Route path="*" element={<Navigate to="/pt" replace />} />
                 </Routes>
               </Suspense>
