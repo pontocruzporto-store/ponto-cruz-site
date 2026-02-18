@@ -11,14 +11,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </HelmetProvider>
   </React.StrictMode>,
 );
-
-// Remover loading screen quando React carregar
-setTimeout(() => {
-  document.body.classList.add("react-loaded");
-  const loadingScreen = document.getElementById("loading-screen");
-  if (loadingScreen) {
-    setTimeout(() => {
-      loadingScreen.remove();
-    }, 500);
-  }
-}, 100);

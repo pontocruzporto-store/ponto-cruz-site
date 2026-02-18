@@ -45,9 +45,10 @@ const Header = () => {
       <div className="header-container">
         <Link to={`/${language}`} className="logo">
           <OptimizedImage
-            src="/logo-simple-400.webp"
-            alt="Ponto Cruz"
+            src="/logo-simple-100.webp"
+            srcSet="/logo-simple-100.webp 100w, /logo-simple-200.webp 200w, /logo-simple-400.webp 400w"
             sizes="120px"
+            alt="Ponto Cruz"
             loading="eager"
             fetchpriority="high"
             isLogo={true}
