@@ -47,7 +47,7 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Cache de longa duração para assets com hash (JS, CSS)
+# Cache de longa duracao para assets com hash (JS, CSS)
 [[headers]]
   for = "/assets/*"
   [headers.values]
@@ -62,4 +62,4 @@
 [[headers]]
   for = "/logo-simple-*.webp"
   [headers.values]
-    Cache-Control = "pub
+    Cache-Control = "public, max-age=2592000"
