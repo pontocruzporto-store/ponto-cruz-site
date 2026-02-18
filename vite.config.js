@@ -9,15 +9,8 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: undefined,
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name === "style.css") {
-            return "assets/critical.css";
-          }
-          return "assets/[name]-[hash][extname]";
-        },
       },
     },
-    cssCodeSplit: true,
   },
   base: "/",
 });
