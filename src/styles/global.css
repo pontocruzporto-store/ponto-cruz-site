@@ -1,3 +1,61 @@
+/* Self-hosted fonts via Fontsource — no Google Fonts, no render-blocking requests */
+@import "@fontsource/cormorant-garamond/300.css";
+@import "@fontsource/cormorant-garamond/400.css";
+@import "@fontsource/cormorant-garamond/500.css";
+@import "@fontsource/cormorant-garamond/600.css";
+@import "@fontsource/cormorant-garamond/700.css";
+@import "@fontsource/work-sans/300.css";
+@import "@fontsource/work-sans/400.css";
+@import "@fontsource/work-sans/500.css";
+@import "@fontsource/work-sans/600.css";
+
+/* Override Fontsource default font-display:swap → optional to prevent CLS */
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-display: optional;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-display: optional;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-display: optional;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-display: optional;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-display: optional;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Work Sans";
+  font-display: optional;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Work Sans";
+  font-display: optional;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Work Sans";
+  font-display: optional;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Work Sans";
+  font-display: optional;
+  font-weight: 600;
+}
+
 /* Global Styles - Museum/Editorial Aesthetic */
 
 :root {
