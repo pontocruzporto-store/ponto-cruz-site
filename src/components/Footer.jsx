@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useLanguage } from '../utils/LanguageContext';
-import visitInfo from '../data/visitInfo';
-import './Footer.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import { useLanguage } from "../utils/LanguageContext";
+import visitInfo from "../data/visitInfo";
+import "./Footer.css";
 
 const Footer = () => {
   const { language, t } = useLanguage();
@@ -13,29 +13,31 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-grid">
           <div className="footer-section">
-            <h4>{t('footer.address')}</h4>
+            <p className="footer-heading">{t("footer.address")}</p>
             <p className="footer-text">{info.address}</p>
           </div>
 
           <div className="footer-section">
-            <h4>{t('footer.hours')}</h4>
+            <p className="footer-heading">{t("footer.hours")}</p>
             {info.hours.map((hour, index) => (
-              <p key={index} className="footer-text">{hour}</p>
+              <p key={index} className="footer-text">
+                {hour}
+              </p>
             ))}
           </div>
 
           <div className="footer-section">
-            <h4>{t('footer.contact')}</h4>
+            <p className="footer-heading">{t("footer.contact")}</p>
             <p className="footer-text">
               <a href={`mailto:${info.email}`}>{info.email}</a>
             </p>
             <p className="footer-text">
-              <a href={`tel:${info.phone.replace(/\s/g, '')}`}>{info.phone}</a>
+              <a href={`tel:${info.phone.replace(/\s/g, "")}`}>{info.phone}</a>
             </p>
           </div>
 
           <div className="footer-section">
-            <h4>{t('footer.follow')}</h4>
+            <p className="footer-heading">{t("footer.follow")}</p>
             <div className="social-links">
               <a
                 href="https://www.instagram.com/pontocruzporto/"
@@ -59,10 +61,16 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <p className="copyright">
-            {t('footer.copyright')}
-            {' · '}
+            {t("footer.copyright")}
+            {" · "}
             <Link to={`/${language}/sitemap`}>
-              {language === 'pt' ? 'Mapa do site' : language === 'en' ? 'Sitemap' : language === 'ko' ? '사이트맵' : 'サイトマップ'}
+              {language === "pt"
+                ? "Mapa do site"
+                : language === "en"
+                  ? "Sitemap"
+                  : language === "ko"
+                    ? "사이트맵"
+                    : "サイトマップ"}
             </Link>
           </p>
         </div>

@@ -48,16 +48,16 @@
   font-weight: 400;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--color-grey-mid);
+  /* #3a3a3a at 0.85 opacity on cream (#faf8f5) passes WCAG AA contrast */
+  color: #3a3a3a;
   position: relative;
   padding: 0.5rem 0;
-  /* Use opacity instead of color for the active/hover state change */
   transition: opacity var(--transition);
 }
 
 /* Dim inactive links; hover/active restores full opacity */
 .nav-link {
-  opacity: 0.6;
+  opacity: 0.85;
 }
 
 .nav-link:hover,
@@ -65,23 +65,23 @@
   opacity: 1;
 }
 
-/* Underline: use transform:scaleX instead of width — GPU composited, no CLS */
+/* Underline: use transform:scaleX instead of width - GPU composited, no CLS */
 .nav-link::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%; /* always full width */
+  width: 100%;
   height: 1px;
   background: var(--color-black);
-  transform: scaleX(0); /* hidden by default */
+  transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.3s ease;
 }
 
 .nav-link.active::after,
 .nav-link:hover::after {
-  transform: scaleX(1); /* revealed on hover/active */
+  transform: scaleX(1);
 }
 
 .header-actions {
@@ -166,7 +166,7 @@
   .nav-link {
     padding: var(--spacing-sm) 0;
     border-bottom: 1px solid var(--color-border);
-    opacity: 0.6;
+    opacity: 0.85;
   }
 
   .nav-link:hover,

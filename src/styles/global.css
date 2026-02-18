@@ -1,7 +1,7 @@
 /* Self-hosted fonts via Fontsource — no Google Fonts, no render-blocking requests */
 /* Using variable fonts for smaller file size and single request per family */
-@import "@fontsource-variable/cormorant-garamond";
-@import "@fontsource-variable/work-sans";
+@import "@fontsource-variable/cormorant-garamond/wght.css";
+@import "@fontsource-variable/work-sans/wght.css";
 
 /* Global Styles - Museum/Editorial Aesthetic */
 
@@ -15,7 +15,7 @@
   --color-grey-light: #c4c4c4;
   --color-border: #e8e6e3;
 
-  /* Typography  */
+  /* Typography */
   --font-serif: "Cormorant Garamond Variable", "Garamond", "Georgia", serif;
   --font-sans: "Work Sans Variable", "Helvetica Neue", "Arial", sans-serif;
 

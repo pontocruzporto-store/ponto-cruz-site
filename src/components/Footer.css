@@ -18,7 +18,9 @@
   margin-bottom: var(--spacing-xl);
 }
 
-.footer-section h4 {
+/* Replaces .footer-section h4 — now used on <p class="footer-heading"> */
+.footer-section h4,
+.footer-heading {
   font-family: var(--font-sans);
   font-size: 0.85rem;
   font-weight: 600;

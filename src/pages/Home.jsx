@@ -82,7 +82,7 @@ const Home = () => {
                     <OptimizedImage
                       src={brand["card-image"]}
                       alt={brand.translations[language].name}
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes="(max-width: 768px) 100vw, 400px"
                       width={800}
                       height={600}
                     />
@@ -113,7 +113,7 @@ const Home = () => {
                     <OptimizedImage
                       src={place.image}
                       alt={place.translations[language].name}
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes="(max-width: 768px) 100vw, 400px"
                       width={800}
                       height={600}
                     />

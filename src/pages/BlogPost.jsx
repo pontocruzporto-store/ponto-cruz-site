@@ -1,11 +1,13 @@
-import React from "react";
-import ReactMarkdown from "react-markdown";
+import React, { Suspense, lazy } from "react";
 import remarkGfm from "remark-gfm";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { useLanguage } from "../utils/LanguageContext";
 import blogData from "../data/blog";
 import OptimizedImage from "../components/OptimizedImage";
 import "./BlogPost.css";
+
+// Lazy-loaded: markdown parser only loads when a blog post is visited
+const ReactMarkdown = lazy(() => import("react-markdown"));
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -69,9 +71,11 @@ const BlogPost = () => {
           )}
 
           <div className="blog-post-body content-wrapper">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
-              {markdown}
-            </ReactMarkdown>
+            <Suspense fallback={<div />}>
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                {markdown}
+              </ReactMarkdown>
+            </Suspense>
           </div>
         </div>
       </article>

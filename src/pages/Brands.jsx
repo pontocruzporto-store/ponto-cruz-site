@@ -35,7 +35,7 @@ const Brands = () => {
                     <OptimizedImage
                       src={brand.logo}
                       alt={brand.translations[language].name}
-                      sizes="(max-width: 768px) 100vw, 25vw"
+                      sizes="(max-width: 768px) 100vw, 300px"
                       width={400}
                       height={400}
                     />

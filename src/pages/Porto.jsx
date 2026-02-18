@@ -59,7 +59,7 @@ const Porto = () => {
                     <OptimizedImage
                       src={place.image}
                       alt={place.translations[language].name}
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes="(max-width: 768px) 100vw, 400px"
                       width={800}
                       height={600}
                     />
