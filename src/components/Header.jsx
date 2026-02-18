@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { useLanguage } from '../utils/LanguageContext';
-import './Header.css';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useLanguage } from "../utils/LanguageContext";
+import "./Header.css";
 
 const Header = () => {
   const { language, changeLanguage, t } = useLanguage();
@@ -14,8 +14,8 @@ const Header = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -23,35 +23,35 @@ const Header = () => {
   }, [location]);
 
   const navItems = [
-    { key: 'home', path: `/${language}` },
-    { key: 'about', path: `/${language}/about` },
-    { key: 'brands', path: `/${language}/brands` },
-    { key: 'visit', path: `/${language}/visit` },
-    { key: 'porto', path: `/${language}/porto` },
-    { key: 'blog', path: `/${language}/blog` },
-    { key: 'contact', path: `/${language}/contact` }
+    { key: "home", path: `/${language}` },
+    { key: "about", path: `/${language}/about` },
+    { key: "brands", path: `/${language}/brands` },
+    { key: "visit", path: `/${language}/visit` },
+    { key: "porto", path: `/${language}/porto` },
+    { key: "blog", path: `/${language}/blog` },
+    { key: "contact", path: `/${language}/contact` },
   ];
 
   const languages = [
-    { code: 'pt', label: 'PT' },
-    { code: 'en', label: 'EN' },
-    { code: 'ko', label: 'KO' },
-    { code: 'ja', label: 'JA' }
+    { code: "pt", label: "PT" },
+    { code: "en", label: "EN" },
+    { code: "kowebp", label: "KO" },
+    { code: "ja", label: "JA" },
   ];
 
   return (
-    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
+    <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="header-container">
         <Link to={`/${language}`} className="logo">
-          <img src="/logo-simple.png" alt="Ponto Cruz" />
+          <img src="/logo-simple-400.webp" alt="Ponto Cruz" />
         </Link>
 
-        <nav className={`nav ${isMobileMenuOpen ? 'open' : ''}`}>
-          {navItems.map(item => (
+        <nav className={`nav ${isMobileMenuOpen ? "open" : ""}`}>
+          {navItems.map((item) => (
             <Link
               key={item.key}
               to={item.path}
-              className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
+              className={`nav-link ${location.pathname === item.path ? "active" : ""}`}
             >
               {t(`nav.${item.key}`)}
             </Link>
@@ -60,11 +60,11 @@ const Header = () => {
 
         <div className="header-actions">
           <div className="language-switcher">
-            {languages.map(lang => (
+            {languages.map((lang) => (
               <button
                 key={lang.code}
                 onClick={() => changeLanguage(lang.code)}
-                className={`lang-button ${language === lang.code ? 'active' : ''}`}
+                className={`lang-button ${language === lang.code ? "active" : ""}`}
               >
                 {lang.label}
               </button>
