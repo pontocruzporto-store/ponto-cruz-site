@@ -1,22 +1,24 @@
-import React, { useState } from 'react';
-import { useLanguage } from '../utils/LanguageContext';
-import placesData from '../data/places';
-import './Porto.css';
+import React, { useState } from "react";
+import { useLanguage } from "../utils/LanguageContext";
+import placesData from "../data/places";
+import OptimizedImage from "../components/OptimizedImage";
+import "./Porto.css";
 
 const Porto = () => {
   const { language, t } = useLanguage();
-  const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState("all");
 
-  const filteredPlaces = filter === 'all' 
-    ? placesData 
-    : placesData.filter(place => place.category === filter);
+  const filteredPlaces =
+    filter === "all"
+      ? placesData
+      : placesData.filter((place) => place.category === filter);
 
   return (
     <div className="porto-page">
       <section className="page-hero">
         <div className="container">
-          <h1>{t('porto.title')}</h1>
-          <p className="page-subtitle">{t('porto.subtitle')}</p>
+          <h1>{t("porto.title")}</h1>
+          <p className="page-subtitle">{t("porto.subtitle")}</p>
         </div>
       </section>
 
@@ -25,22 +27,22 @@ const Porto = () => {
           {/* Filter Buttons */}
           <div className="filter-bar">
             <button
-              className={`filter-button ${filter === 'all' ? 'active' : ''}`}
-              onClick={() => setFilter('all')}
+              className={`filter-button ${filter === "all" ? "active" : ""}`}
+              onClick={() => setFilter("all")}
             >
-              {t('porto.filterAll')}
+              {t("porto.filterAll")}
             </button>
             <button
-              className={`filter-button ${filter === 'visit' ? 'active' : ''}`}
-              onClick={() => setFilter('visit')}
+              className={`filter-button ${filter === "visit" ? "active" : ""}`}
+              onClick={() => setFilter("visit")}
             >
-              {t('porto.filterVisit')}
+              {t("porto.filterVisit")}
             </button>
             <button
-              className={`filter-button ${filter === 'eat' ? 'active' : ''}`}
-              onClick={() => setFilter('eat')}
+              className={`filter-button ${filter === "eat" ? "active" : ""}`}
+              onClick={() => setFilter("eat")}
             >
-              {t('porto.filterEat')}
+              {t("porto.filterEat")}
             </button>
           </div>
 
@@ -51,15 +53,18 @@ const Porto = () => {
             </div>
           ) : (
             <div className="porto-places-grid">
-              {filteredPlaces.map(place => (
+              {filteredPlaces.map((place) => (
                 <div key={place.slug} className="porto-place-card">
                   <div className="porto-place-image">
-                    <img 
-                      src={place.image} 
+                    <OptimizedImage
+                      src={place.image}
                       alt={place.translations[language].name}
+                      sizes="(max-width: 768px) 100vw, 33vw"
                     />
                     <span className="place-category-badge">
-                      {t(`porto.filter${place.category === 'visit' ? 'Visit' : 'Eat'}`)}
+                      {t(
+                        `porto.filter${place.category === "visit" ? "Visit" : "Eat"}`,
+                      )}
                     </span>
                   </div>
                   <div className="porto-place-content">
@@ -72,7 +77,8 @@ const Porto = () => {
                     </p>
                     {place.translations[language].tips && (
                       <div className="place-tips">
-                        <strong>{t('porto.tipLabel')}</strong> {place.translations[language].tips}
+                        <strong>{t("porto.tipLabel")}</strong>{" "}
+                        {place.translations[language].tips}
                       </div>
                     )}
 
@@ -83,7 +89,7 @@ const Porto = () => {
                         rel="noopener noreferrer"
                         className="place-directions"
                       >
-                        {t('porto.directionsLabel')}
+                        {t("porto.directionsLabel")}
                       </a>
                     )}
                   </div>

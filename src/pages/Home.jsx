@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "../utils/LanguageContext";
 import brandsData from "../data/brands";
 import placesData from "../data/places";
+import OptimizedImage from "../components/OptimizedImage";
 import "./Home.css";
 
 const Home = () => {
@@ -20,9 +21,12 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-image">
-          <img
+          <OptimizedImage
             src="/images/hero/hero-image-1200.webp"
             alt="Authentic Souvenir & Concept Store in Porto"
+            loading="eager"
+            fetchpriority="high"
+            sizes="100vw"
           />
         </div>
         <div className="hero-content">
@@ -36,9 +40,10 @@ const Home = () => {
         <div className="container">
           <div className="about-preview-grid">
             <div className="about-preview-image">
-              <img
+              <OptimizedImage
                 src="/images/hero/about-image-1200.webp"
                 alt="Store interior"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div className="about-preview-content">
@@ -70,9 +75,10 @@ const Home = () => {
                   className="brand-card"
                 >
                   <div className="brand-card-image">
-                    <img
+                    <OptimizedImage
                       src={brand["card-image"]}
                       alt={brand.translations[language].name}
+                      sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   </div>
                   <h3>{brand.translations[language].name}</h3>
@@ -98,9 +104,10 @@ const Home = () => {
               {featuredPlaces.map((place) => (
                 <div key={place.slug} className="place-card">
                   <div className="place-card-image">
-                    <img
+                    <OptimizedImage
                       src={place.image}
                       alt={place.translations[language].name}
+                      sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   </div>
                   <div className="place-card-content">

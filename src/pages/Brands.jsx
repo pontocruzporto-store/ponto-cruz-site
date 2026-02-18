@@ -1,8 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useLanguage } from '../utils/LanguageContext';
-import brandsData from '../data/brands';
-import './Brands.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import { useLanguage } from "../utils/LanguageContext";
+import brandsData from "../data/brands";
+import OptimizedImage from "../components/OptimizedImage";
+import "./Brands.css";
 
 const Brands = () => {
   const { language, t } = useLanguage();
@@ -11,8 +12,8 @@ const Brands = () => {
     <div className="brands-page">
       <section className="page-hero">
         <div className="container">
-          <h1>{t('brands.title')}</h1>
-          <p className="page-subtitle">{t('brands.subtitle')}</p>
+          <h1>{t("brands.title")}</h1>
+          <p className="page-subtitle">{t("brands.subtitle")}</p>
         </div>
       </section>
 
@@ -24,16 +25,17 @@ const Brands = () => {
             </div>
           ) : (
             <div className="brands-grid-large">
-              {brandsData.map(brand => (
+              {brandsData.map((brand) => (
                 <Link
                   key={brand.slug}
                   to={`/${language}/brands/${brand.slug}`}
                   className="brand-card-large"
                 >
                   <div className="brand-card-image-large">
-                    <img 
-                      src={brand.logo} 
+                    <OptimizedImage
+                      src={brand.logo}
                       alt={brand.translations[language].name}
+                      sizes="(max-width: 768px) 100vw, 25vw"
                     />
                   </div>
                   <div className="brand-card-info">

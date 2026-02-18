@@ -1,27 +1,37 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useLanguage } from '../utils/LanguageContext';
-import blogData from '../data/blog';
-import './Blog.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import { useLanguage } from "../utils/LanguageContext";
+import blogData from "../data/blog";
+import OptimizedImage from "../components/OptimizedImage";
+import "./Blog.css";
 
 const Blog = () => {
   const { language, t } = useLanguage();
 
   const formatDate = (dateStr) => {
     const d = new Date(dateStr);
-    return d.toLocaleDateString(language === 'pt' ? 'pt-PT' : language === 'ko' ? 'ko-KR' : language === 'ja' ? 'ja-JP' : 'en-GB', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
+    return d.toLocaleDateString(
+      language === "pt"
+        ? "pt-PT"
+        : language === "ko"
+          ? "ko-KR"
+          : language === "ja"
+            ? "ja-JP"
+            : "en-GB",
+      {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      },
+    );
   };
 
   return (
     <div className="blog-page">
       <section className="page-hero">
         <div className="container">
-          <h1>{t('blog.title')}</h1>
-          <p className="page-subtitle">{t('blog.subtitle')}</p>
+          <h1>{t("blog.title")}</h1>
+          <p className="page-subtitle">{t("blog.subtitle")}</p>
         </div>
       </section>
 
@@ -29,12 +39,13 @@ const Blog = () => {
         <div className="container">
           {blogData.length === 0 ? (
             <div className="empty-state">
-              <p>{t('blog.empty')}</p>
+              <p>{t("blog.empty")}</p>
             </div>
           ) : (
             <div className="blog-grid">
               {blogData.map((post) => {
-                const content = post.translations[language] || post.translations.pt;
+                const content =
+                  post.translations[language] || post.translations.pt;
                 return (
                   <Link
                     key={post.slug}
@@ -43,7 +54,11 @@ const Blog = () => {
                   >
                     {post.image && (
                       <div className="blog-card-image">
-                        <img src={post.image} alt="" loading="lazy" />
+                        <OptimizedImage
+                          src={post.image}
+                          alt=""
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                        />
                       </div>
                     )}
                     <div className="blog-card-content">

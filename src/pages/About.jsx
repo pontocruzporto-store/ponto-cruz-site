@@ -1,5 +1,6 @@
 import React from "react";
 import { useLanguage } from "../utils/LanguageContext";
+import OptimizedImage from "../components/OptimizedImage";
 import "./About.css";
 
 const About = () => {
@@ -24,7 +25,11 @@ const About = () => {
                 <p>{t("about.familyBody2")}</p>
               </div>
               <div className="about-image">
-                <img src="/images/hero/about-image-1200.webp" alt="Family" />
+                <OptimizedImage
+                  src="/images/hero/about-image-1200.webp"
+                  alt="Family"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
 
@@ -36,7 +41,11 @@ const About = () => {
                 <p>{t("about.portoBody2")}</p>
               </div>
               <div className="about-image">
-                <img src="/images/hero/porto_photo.webp" alt="Porto" />
+                <OptimizedImage
+                  src="/images/hero/porto_photo.webp"
+                  alt="Porto"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
 
@@ -48,9 +57,10 @@ const About = () => {
                 <p>{t("about.craftsmanshipBody2")}</p>
               </div>
               <div className="about-image">
-                <img
+                <OptimizedImage
                   src="/images/hero/artesanato_photo.webp"
                   alt="Craftsmanship"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
             </div>
@@ -63,7 +73,11 @@ const About = () => {
                 <p>{t("about.philosophyBody2")}</p>
               </div>
               <div className="about-image">
-                <img src="/images/hero/ponte_photo.webp" alt="Store detail" />
+                <OptimizedImage
+                  src="/images/hero/ponte_photo.webp"
+                  alt="Store detail"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>

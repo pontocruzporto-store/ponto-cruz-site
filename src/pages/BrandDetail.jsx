@@ -1,15 +1,16 @@
-import React from 'react';
-import { useParams, Navigate } from 'react-router-dom';
-import { useLanguage } from '../utils/LanguageContext';
-import brandsData from '../data/brands';
-import './BrandDetail.css';
+import React from "react";
+import { useParams, Navigate } from "react-router-dom";
+import { useLanguage } from "../utils/LanguageContext";
+import brandsData from "../data/brands";
+import OptimizedImage from "../components/OptimizedImage";
+import "./BrandDetail.css";
 
 const BrandDetail = () => {
   const { slug } = useParams();
   const { language, t } = useLanguage();
-  
-  const brand = brandsData.find(b => b.slug === slug);
-  
+
+  const brand = brandsData.find((b) => b.slug === slug);
+
   if (!brand) {
     return <Navigate to={`/${language}/brands`} replace />;
   }
@@ -22,7 +23,11 @@ const BrandDetail = () => {
         <div className="container">
           <div className="brand-hero-content">
             <div className="brand-logo-large">
-              <img src={brand.logo} alt={content.name} />
+              <OptimizedImage
+                src={brand.logo}
+                alt={content.name}
+                sizes="(max-width: 768px) 200px, 300px"
+              />
             </div>
             <h1>{content.name}</h1>
             <p className="brand-hero-tagline">{content.tagline}</p>
@@ -34,12 +39,12 @@ const BrandDetail = () => {
         <div className="container">
           <div className="brand-info-grid">
             <div className="brand-info-section">
-              <h3>{t('brands.origin')}</h3>
+              <h3>{t("brands.origin")}</h3>
               <p>{content.origin}</p>
             </div>
 
             <div className="brand-info-section">
-              <h3>{t('brands.philosophy')}</h3>
+              <h3>{t("brands.philosophy")}</h3>
               <p>{content.philosophy}</p>
             </div>
           </div>
@@ -47,7 +52,7 @@ const BrandDetail = () => {
           {content.story && (
             <div className="brand-story">
               <div className="content-wrapper">
-                {content.story.split('\n\n').map((paragraph, index) => (
+                {content.story.split("\n\n").map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
               </div>
@@ -59,7 +64,7 @@ const BrandDetail = () => {
       {brand.products && brand.products.length > 0 && (
         <section className="section products-section">
           <div className="container">
-            <h2 className="section-title">{t('brands.productsTitle')}</h2>
+            <h2 className="section-title">{t("brands.productsTitle")}</h2>
             <div className="products-grid">
               {brand.products.map((product, index) => (
                 <div key={index} className="product-card">

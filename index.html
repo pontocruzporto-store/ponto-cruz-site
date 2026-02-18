@@ -41,7 +41,14 @@
     />
     <title>Ponto Cruz Concept Store</title>
 
-    <link rel="preload" as="image" href="/images/hero/hero-image.png" />
+    <link
+      rel="preload"
+      as="image"
+      href="/images/hero/hero-image-800.webp"
+      imagesrcset="/images/hero/hero-image-400.webp 400w, /images/hero/hero-image-800.webp 800w, /images/hero/hero-image-1200.webp 1200w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -66,7 +73,7 @@
     /></noscript>
 
     <!-- Favicon placeholder -->
-    <link rel="icon" type="image/svg+xml" href="/logo-simple.png" />
+    <link rel="icon" type="image/svg+xml" href="/logo-simple-400.webp" />
   </head>
   <body>
     <!-- Hidden static Netlify form so Netlify can parse the fields at build time -->
@@ -96,7 +103,7 @@
         "
       >
         <img
-          src="/logo-simple.png"
+          src="/logo-simple-400.webp"
           alt="Ponto Cruz"
           style="
             width: 120px;

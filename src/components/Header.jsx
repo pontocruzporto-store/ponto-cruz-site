@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "../utils/LanguageContext";
+import OptimizedImage from "../components/OptimizedImage";
 import "./Header.css";
 
 const Header = () => {
@@ -35,7 +36,7 @@ const Header = () => {
   const languages = [
     { code: "pt", label: "PT" },
     { code: "en", label: "EN" },
-    { code: "kowebp", label: "KO" },
+    { code: "ko", label: "KO" },
     { code: "ja", label: "JA" },
   ];
 
@@ -43,7 +44,11 @@ const Header = () => {
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="header-container">
         <Link to={`/${language}`} className="logo">
-          <img src="/logo-simple-400.webp" alt="Ponto Cruz" />
+          <OptimizedImage
+            src="/logo-simple-400.webp"
+            alt="Ponto Cruz"
+            sizes="120px"
+          />
         </Link>
 
         <nav className={`nav ${isMobileMenuOpen ? "open" : ""}`}>
