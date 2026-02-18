@@ -23,11 +23,21 @@
       fetchpriority="high"
     />
 
-    <!--
-      display=optional: browser won't swap fonts after first render.
-      Eliminates font-swap CLS entirely. Trade-off: on very slow connections
-      the fallback font may be shown for the whole session, but layout never shifts.
-    -->
+    <!-- Preload self-hosted fonts (latin only) so they arrive before first render -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="/assets/cormorant-garamond-latin-wght-normal-CUoBjw-S.woff2"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="/assets/work-sans-latin-wght-normal-Bl-S9Xys.woff2"
+    />
 
     <link rel="icon" type="image/webp" href="/logo-simple-100.webp" />
   </head>
