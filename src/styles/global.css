@@ -9,11 +9,11 @@
   --color-grey-mid: #666666;
   --color-grey-light: #c4c4c4;
   --color-border: #e8e6e3;
-  
+
   /* Typography */
-  --font-serif: 'Cormorant Garamond', serif;
-  --font-sans: 'Work Sans', sans-serif;
-  
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Work Sans", sans-serif;
+
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -21,11 +21,11 @@
   --spacing-lg: 4rem;
   --spacing-xl: 6rem;
   --spacing-2xl: 8rem;
-  
+
   /* Layout */
   --max-width: 1400px;
   --content-width: 900px;
-  
+
   /* Transitions */
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -51,30 +51,41 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif);
   font-weight: 400;
   line-height: 1.2;
   color: var(--color-black);
   margin-bottom: var(--spacing-md);
+  /* Prevent CLS by reserving space */
+  min-height: 1.2em;
 }
 
 h1 {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   letter-spacing: -0.02em;
+  min-height: 1.1em;
 }
 
 h2 {
   font-size: clamp(2rem, 4vw, 3.5rem);
   letter-spacing: -0.01em;
+  min-height: 1.1em;
 }
 
 h3 {
   font-size: clamp(1.5rem, 3vw, 2.5rem);
+  min-height: 1.1em;
 }
 
 h4 {
   font-size: 1.5rem;
+  min-height: 1.1em;
 }
 
 p {
@@ -203,11 +214,11 @@ button:hover,
     --spacing-xl: 3rem;
     --spacing-2xl: 4rem;
   }
-  
+
   .section {
     padding: var(--spacing-xl) 0;
   }
-  
+
   .grid {
     gap: var(--spacing-md);
   }

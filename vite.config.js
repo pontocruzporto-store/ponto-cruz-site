@@ -8,7 +8,12 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       output: {
-        manualChunks: undefined,
+        manualChunks: {
+          vendor: ["react", "react-dom"],
+          router: ["react-router-dom"],
+          markdown: ["react-markdown", "remark-gfm"],
+          analytics: ["react-ga4", "react-helmet-async"],
+        },
       },
     },
   },
