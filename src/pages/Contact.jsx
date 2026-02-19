@@ -1,52 +1,86 @@
-import React, { useState } from 'react';
-import { useLanguage } from '../utils/LanguageContext';
-import visitInfo from '../data/visitInfo';
-import './Contact.css';
+import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
+import { useLanguage } from "../utils/LanguageContext";
+import visitInfo from "../data/visitInfo";
+import "./Contact.css";
+
+const META = {
+  pt: {
+    title: "Contacto | Ponto Cruz Concept Store Porto",
+    description:
+      "Fala connosco! Envia uma mensagem à Ponto Cruz Concept Store no Porto. Respondemos com prazer.",
+  },
+  en: {
+    title: "Contact | Ponto Cruz Concept Store Porto",
+    description:
+      "Get in touch with Ponto Cruz Concept Store in Porto. We'd love to hear from you.",
+  },
+  ko: {
+    title: "문의하기 | 폰토 크루즈 콘셉트 스토어 포르투",
+    description:
+      "폰토 크루즈 콘셉트 스토어에 문의하세요. 언제든지 연락 주시면 기쁘게 답변해 드리겠습니다.",
+  },
+  ja: {
+    title: "お問い合わせ | ポント・クルス コンセプトストア ポルト",
+    description:
+      "ポルトのポント・クルス コンセプトストアにお気軽にお問い合わせください。",
+  },
+};
 
 const Contact = () => {
   const { language, t } = useLanguage();
   const info = visitInfo.translations[language];
-  const [formState, setFormState] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState('');
+  const meta = META[language] || META.pt;
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus('sending');
+    setStatus("sending");
 
     try {
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({
-          'form-name': 'contact',
-          ...formState
-        }).toString()
+          "form-name": "contact",
+          ...formState,
+        }).toString(),
       });
 
       if (response.ok) {
-        setStatus('success');
-        setFormState({ name: '', email: '', message: '' });
+        setStatus("success");
+        setFormState({ name: "", email: "", message: "" });
       } else {
-        setStatus('error');
+        setStatus("error");
       }
     } catch (error) {
-      setStatus('error');
+      setStatus("error");
     }
   };
 
   const handleChange = (e) => {
     setFormState({
       ...formState,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   return (
     <div className="contact-page">
+      <Helmet>
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
+      </Helmet>
+
       <section className="page-hero">
         <div className="container">
-          <h1>{t('contact.title')}</h1>
-          <p className="page-subtitle">{t('contact.subtitle')}</p>
+          <h1>{t("contact.title")}</h1>
+          <p className="page-subtitle">{t("contact.subtitle")}</p>
         </div>
       </section>
 
@@ -55,17 +89,17 @@ const Contact = () => {
           <div className="contact-grid">
             {/* Contact Form */}
             <div className="contact-form-wrapper">
-              <form 
-                name="contact" 
-                method="POST" 
+              <form
+                name="contact"
+                method="POST"
                 data-netlify="true"
                 onSubmit={handleSubmit}
                 className="contact-form"
               >
                 <input type="hidden" name="form-name" value="contact" />
-                
+
                 <div className="form-group">
-                  <label htmlFor="name">{t('contact.name')}</label>
+                  <label htmlFor="name">{t("contact.name")}</label>
                   <input
                     type="text"
                     id="name"
@@ -77,7 +111,7 @@ const Contact = () => {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="email">{t('contact.email')}</label>
+                  <label htmlFor="email">{t("contact.email")}</label>
                   <input
                     type="email"
                     id="email"
@@ -89,7 +123,7 @@ const Contact = () => {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="message">{t('contact.message')}</label>
+                  <label htmlFor="message">{t("contact.message")}</label>
                   <textarea
                     id="message"
                     name="message"
@@ -100,19 +134,21 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="button"
-                  disabled={status === 'sending'}
+                  disabled={status === "sending"}
                 >
-                  {status === 'sending' ? t('contact.sending') : t('contact.send')}
+                  {status === "sending"
+                    ? t("contact.sending")
+                    : t("contact.send")}
                 </button>
 
-                {status === 'success' && (
-                  <p className="form-message success">{t('contact.success')}</p>
+                {status === "success" && (
+                  <p className="form-message success">{t("contact.success")}</p>
                 )}
-                {status === 'error' && (
-                  <p className="form-message error">{t('contact.error')}</p>
+                {status === "error" && (
+                  <p className="form-message error">{t("contact.error")}</p>
                 )}
               </form>
             </div>
@@ -120,41 +156,44 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="contact-info-wrapper">
               <div className="contact-info-card">
-                <h3>{t('contact.visitUsTitle')}</h3>
+                <h3>{t("contact.visitUsTitle")}</h3>
                 <p>{info.address}</p>
               </div>
 
               <div className="contact-info-card">
-                <h3>{t('contact.openingHoursTitle')}</h3>
+                <h3>{t("contact.openingHoursTitle")}</h3>
                 {info.hours.map((hour, index) => (
                   <p key={index}>{hour}</p>
                 ))}
               </div>
 
               <div className="contact-info-card">
-                <h3>{t('contact.getInTouchTitle')}</h3>
+                <h3>{t("contact.getInTouchTitle")}</h3>
                 <p>
-                  <a href={`mailto:${info.email}`}>{info.email}</a><br />
-                  <a href={`tel:${info.phone.replace(/\s/g, '')}`}>{info.phone}</a>
+                  <a href={`mailto:${info.email}`}>{info.email}</a>
+                  <br />
+                  <a href={`tel:${info.phone.replace(/\s/g, "")}`}>
+                    {info.phone}
+                  </a>
                 </p>
               </div>
 
               <div className="contact-info-card">
-                <h3>{t('contact.followUsTitle')}</h3>
+                <h3>{t("contact.followUsTitle")}</h3>
                 <div className="social-links-vertical">
                   <a
                     href="https://www.instagram.com/pontocruzporto/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {t('contact.instagram')}
+                    {t("contact.instagram")}
                   </a>
                   <a
                     href="https://www.facebook.com/pontocruzporto/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {t('contact.facebook')}
+                    {t("contact.facebook")}
                   </a>
                 </div>
               </div>

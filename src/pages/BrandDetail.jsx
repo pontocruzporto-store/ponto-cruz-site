@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams, Navigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { useLanguage } from "../utils/LanguageContext";
 import brandsData from "../data/brands";
 import OptimizedImage from "../components/OptimizedImage";
@@ -17,8 +18,19 @@ const BrandDetail = () => {
 
   const content = brand.translations[language];
 
+  // Dynamic title and description built from brand data
+  const pageTitle = `${content.name} | Ponto Cruz Porto`;
+  const pageDescription = content.tagline
+    ? `${content.tagline} — ${content.origin}. Disponível na Ponto Cruz Concept Store no Porto.`
+    : `Descobre ${content.name} na Ponto Cruz Concept Store no Porto. Marcas portuguesas autênticas e artesanato de qualidade.`;
+
   return (
     <div className="brand-detail">
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+      </Helmet>
+
       <section className="brand-hero">
         <div className="container">
           <div className="brand-hero-content">
@@ -70,15 +82,8 @@ const BrandDetail = () => {
             <div className="products-grid">
               {brand.products.map((product, index) => (
                 <div key={index} className="product-card">
-                  {/* <div className="product-image">
-                    <img 
-                      src={product.image} 
-                      alt={product.translations[language].name}
-                    />
-                  </div> */}
                   <div className="product-info">
                     <h4>{product.translations[language].name}</h4>
-                    {/* <p>{product.translations[language].description}</p> */}
                   </div>
                 </div>
               ))}

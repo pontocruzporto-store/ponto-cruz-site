@@ -1,13 +1,39 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { useLanguage } from "../utils/LanguageContext";
 import brandsData from "../data/brands";
 import placesData from "../data/places";
 import OptimizedImage from "../components/OptimizedImage";
 import "./Home.css";
 
+// SEO metadata per language
+const META = {
+  pt: {
+    title: "Ponto Cruz — Concept Store Autêntica no Porto",
+    description:
+      "Souvenirs autênticos e marcas portuguesas independentes no Porto. Uma loja familiar com produtos de qualidade, design local e identidade portuguesa.",
+  },
+  en: {
+    title: "Ponto Cruz — Authentic Concept Store in Porto, Portugal",
+    description:
+      "Authentic Portuguese souvenirs and independent local brands in Porto. A family-run concept store with curated crafts, design and quality.",
+  },
+  ko: {
+    title: "폰토 크루즈 — 포르투의 정품 콘셉트 스토어",
+    description:
+      "포르투에서 만나는 진짜 포르투갈 기념품과 독립 브랜드. 가족이 운영하는 콘셉트 스토어에서 엄선된 수공예품과 디자인 제품을 만나보세요.",
+  },
+  ja: {
+    title: "ポント・クルス — ポルト本格コンセプトストア",
+    description:
+      "ポルトで見つける本物のポルトガルお土産と独立系ブランド。家族経営のコンセプトストアで厳選されたクラフトとデザインをご覧ください。",
+  },
+};
+
 const Home = () => {
   const { language, t } = useLanguage();
+  const meta = META[language] || META.pt;
 
   const featuredBrands = brandsData
     .filter((brand) => brand.featured)
@@ -18,6 +44,11 @@ const Home = () => {
 
   return (
     <div className="home">
+      <Helmet>
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-image">
@@ -44,7 +75,7 @@ const Home = () => {
             <div className="about-preview-image">
               <OptimizedImage
                 src="/images/hero/about-image-1200.webp"
-                alt="Store interior"
+                alt="Interior da Ponto Cruz Concept Store no Porto"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 width={800}
                 height={600}
@@ -81,7 +112,7 @@ const Home = () => {
                   <div className="brand-card-image">
                     <OptimizedImage
                       src={brand["card-image"]}
-                      alt={brand.translations[language].name}
+                      alt={`${brand.translations[language].name} — disponível na Ponto Cruz Porto`}
                       sizes="(max-width: 768px) 100vw, 400px"
                       width={800}
                       height={600}

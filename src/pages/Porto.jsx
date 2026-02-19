@@ -1,12 +1,37 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useLanguage } from "../utils/LanguageContext";
 import placesData from "../data/places";
 import OptimizedImage from "../components/OptimizedImage";
 import "./Porto.css";
 
+const META = {
+  pt: {
+    title: "O Nosso Porto | Dicas de Turismo da Ponto Cruz",
+    description:
+      "Os nossos lugares favoritos no Porto: restaurantes, museus e sítios especiais que recomendamos a quem nos visita.",
+  },
+  en: {
+    title: "Our Porto | Local Tips & Recommendations from Ponto Cruz",
+    description:
+      "Our favourite spots in Porto: restaurants, museums and hidden gems we recommend to every visitor who steps into our store.",
+  },
+  ko: {
+    title: "우리의 포르투 | 폰토 크루즈의 현지 추천",
+    description:
+      "포르투 현지인이 추천하는 장소들: 레스토랑, 박물관, 숨겨진 보석 같은 곳들을 소개합니다.",
+  },
+  ja: {
+    title: "私たちのポルト | ポント・クルスからのローカルおすすめ",
+    description:
+      "ポルトのお気に入りスポット：レストラン、美術館、隠れた名所など、訪れるすべてのお客様におすすめする場所をご紹介します。",
+  },
+};
+
 const Porto = () => {
   const { language, t } = useLanguage();
   const [filter, setFilter] = useState("all");
+  const meta = META[language] || META.pt;
 
   const filteredPlaces =
     filter === "all"
@@ -15,6 +40,11 @@ const Porto = () => {
 
   return (
     <div className="porto-page">
+      <Helmet>
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
+      </Helmet>
+
       <section className="page-hero">
         <div className="container">
           <h1>{t("porto.title")}</h1>

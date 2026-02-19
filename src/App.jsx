@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import CookieConsent from "./components/CookieConsent";
 import ScrollToTop from "./components/ScrollToTop";
 import Canonical from "./components/Canonical";
+import SchemaOrg from "./components/SchemaOrg";
 import "./styles/global.css";
 
 import Home from "./pages/Home";
@@ -34,7 +35,9 @@ function App() {
   return (
     <Router>
       <LanguageProvider>
+        {/* Global SEO components — run on every page */}
         <Canonical />
+        <SchemaOrg />
         <ScrollToTop />
         <div className="app">
           <Header />
