@@ -8,24 +8,25 @@ import "./Brands.css";
 
 const META = {
   pt: {
-    title: "Marcas Portuguesas | Ponto Cruz Concept Store Porto",
+    title: "Marcas Portuguesas e Design Local | Ponto Cruz Concept Store Porto",
     description:
-      "Descubra as marcas portuguesas que selecionámos: artesanato, design e qualidade feitos em Portugal. Disponíveis na Ponto Cruz no Porto.",
+      "Uma curadoria exclusiva de marcas portuguesas: do artesanato tradicional ao design moderno. Encontre cerâmica, cortiça e têxteis feitos em Portugal na Ponto Cruz.",
   },
   en: {
-    title: "Portuguese Brands & Gifts | Ponto Cruz Porto",
+    title: "Best Portuguese Brands in Porto | Ponto Cruz Boutique & Gifts",
     description:
-      "Explore our curated selection of Portuguese brands — handmade ceramics, cork, textiles and more. Available at Ponto Cruz in Porto.",
+      "Shop the best of Portugal: handcrafted ceramics, eco-friendly cork, and luxury soaps. Discover unique local brands and authentic Porto gifts at our family-run store.",
   },
   ko: {
-    title: "포르투갈 브랜드 & 선물 | 폰토 크루즈 포르투",
+    title: "포르투 쇼핑 필수 브랜드 | 폰토 크루즈 — 포르투갈 감성 기념품",
     description:
-      "엄선된 포르투갈 브랜드 컬렉션 — 수제 도자기, 코르크, 직물 등. 포르투의 폰토 크루즈에서 만나보세요.",
+      "포르투갈 여행에서 꼭 사야 할 브랜드 총집합! 핸드메이드 도자기, 천연 코르크 소품, 고퀄리티 텍스타일까지, 폰토 크루즈가 엄선한 로컬 브랜드를 만나보세요.",
   },
   ja: {
-    title: "ポルトガルブランド＆ギフト | ポント・クルス ポルト",
+    title:
+      "ポルトガルの厳選ブランド集 | ポント・クルス — ポルトの手仕事とデザイン",
     description:
-      "厳選されたポルトガルブランドのコレクション — 手作りセラミック、コルク、テキスタイルなど。ポルトのポント・クルスでご覧ください。",
+      "ポルトガルが誇る伝統の技。手作りの陶磁器、上質なコル크製品、洗練されたテキスタイルなど、長く愛用できるポルトガルブランドを厳選してご紹介します。",
   },
 };
 

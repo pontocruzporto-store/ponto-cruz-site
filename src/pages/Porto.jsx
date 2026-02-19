@@ -7,24 +7,24 @@ import "./Porto.css";
 
 const META = {
   pt: {
-    title: "O Nosso Porto | Dicas de Turismo da Ponto Cruz",
+    title: "Guia do Porto | Os Nossos Lugares Favoritos e Dicas Locais",
     description:
-      "Os nossos lugares favoritos no Porto: restaurantes, museus e sítios especiais que recomendamos a quem nos visita.",
+      "Explore o Porto como um local. A equipa da Ponto Cruz partilha os seus restaurantes, museus e segredos favoritos na cidade. O guia autêntico para quem visita o Porto.",
   },
   en: {
-    title: "Our Porto | Local Tips & Recommendations from Ponto Cruz",
+    title: "Porto Local Guide | Best Restaurants & Hidden Gems by Ponto Cruz",
     description:
-      "Our favourite spots in Porto: restaurants, museums and hidden gems we recommend to every visitor who steps into our store.",
+      "Discover the real Porto with our insider guide. From the best local food to hidden viewpoints and museums, explore the city recommendations from our family-run store.",
   },
   ko: {
-    title: "우리의 포르투 | 폰토 크루즈의 현지 추천",
+    title: "포르투 현지인 맛집 & 명소 가이드 | 폰토 크루즈 추천",
     description:
-      "포르투 현지인이 추천하는 장소들: 레스토랑, 박물관, 숨겨진 보석 같은 곳들을 소개합니다.",
+      "포르투 로컬이 제안하는 진짜 포르투 여행! 인스타 감성 맛집부터 숨겨진 사진 명소, 박물관까지. 폰토 크루즈 가족이 직접 가본 최애 장소들을 공개합니다.",
   },
   ja: {
-    title: "私たちのポルト | ポント・クルスからのローカルおすすめ",
+    title: "ポルトの街歩きガイド | 地元店主が教えるおすすめスポット",
     description:
-      "ポルトのお気に入りスポット：レストラン、美術館、隠れた名所など、訪れるすべてのお客様におすすめする場所をご紹介します。",
+      "ポルトを愛する店主厳選のローカルガイド。美味しいレストランや静かな美術館など、観光ガイドには載っていないポルトの隠れた名所をご案内します。",
   },
 };
 

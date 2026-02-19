@@ -8,24 +8,25 @@ import "./Blog.css";
 
 const META = {
   pt: {
-    title: "Blog | Guias de Compras Autênticas no Porto",
+    title: "Blog Ponto Cruz | Guia de Compras Locais e Artesanato no Porto",
     description:
-      "Artigos e guias sobre souvenirs autênticos, marcas portuguesas e dicas de compras no Porto para turistas e locais.",
+      "Dicas exclusivas sobre o que comprar no Porto. Descubra marcas independentes, a história do artesanato português e onde encontrar souvenirs autênticos longe das armadilhas para turistas.",
   },
   en: {
-    title: "Blog | Authentic Souvenir Guides for Porto Visitors",
+    title:
+      "Porto Shopping Guide Blog | Best Authentic Souvenirs & Local Brands",
     description:
-      "Guides and articles about authentic Porto souvenirs, Portuguese brands and where to shop like a local — not a tourist.",
+      "Wondering what to buy in Porto? Explore our guides to unique Portuguese gifts, handmade ceramics, and the best independent shops. Shop like a local, not a tourist!",
   },
   ko: {
-    title: "블로그 | 포르투 방문객을 위한 정품 기념품 가이드",
+    title: "포르투 쇼핑 가이드 & 블로그 | 꼭 사야 할 기념품 리스트",
     description:
-      "포르투 정품 기념품, 포르투갈 브랜드, 현지인처럼 쇼핑하는 방법에 대한 가이드와 기사.",
+      "포르투갈 여행 쇼핑 리스트 완전 정복! 현지인이 추천하는 핸드메이드 소품, 포르투 기념품 추천, 그리고 숨겨진 로컬 브랜드 이야기를 확인해보세요.",
   },
   ja: {
-    title: "ブログ | ポルト訪問者のための本格お土産ガイド",
+    title: "ポルトの街歩きガイド＆ブログ | 本物志向のポルトガルお土産選び",
     description:
-      "ポルトの本物のお土産、ポルトガルブランド、観光客ではなく地元の人のようにショッピングする方法についてのガイドと記事。",
+      "ポルトで見つける、職人技が光る伝統工芸品や最新のローカルデザイン。自分へのご褒美や大切な人へのギフトに最適な、ポルトガルの逸品を紹介します。",
   },
 };
 

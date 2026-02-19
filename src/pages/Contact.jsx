@@ -6,24 +6,24 @@ import "./Contact.css";
 
 const META = {
   pt: {
-    title: "Contacto | Ponto Cruz Concept Store Porto",
+    title: "Contacto e Localização | Ponto Cruz Concept Store Porto",
     description:
-      "Fala connosco! Envia uma mensagem à Ponto Cruz Concept Store no Porto. Respondemos com prazer.",
+      "Visite a Ponto Cruz no Porto! Veja como chegar à nossa loja de presentes, consulte o nosso horário ou envie-nos uma mensagem. Estamos no coração do Porto para o ajudar.",
   },
   en: {
-    title: "Contact | Ponto Cruz Concept Store Porto",
+    title: "Visit Ponto Cruz Porto | Contact, Location & Opening Hours",
     description:
-      "Get in touch with Ponto Cruz Concept Store in Porto. We'd love to hear from you.",
+      "Looking for the best gift shop in Porto? Find Ponto Cruz's location, check our opening hours, or get in touch for stock inquiries and international shipping.",
   },
   ko: {
-    title: "문의하기 | 폰토 크루즈 콘셉트 스토어 포르투",
+    title: "폰토 크루즈 포르투 찾아오시는 길 | 영업시간 및 문의하기",
     description:
-      "폰토 크루즈 콘셉트 스토어에 문의하세요. 언제든지 연락 주시면 기쁘게 답변해 드리겠습니다.",
+      "포르투 로컬 소품샵 폰토 크루즈 방문 안내. 위치, 영업시간 확인 및 단체 방문/재고 문의는 여기서! 포르투 시내 중심에서 여러분을 기다립니다.",
   },
   ja: {
-    title: "お問い合わせ | ポント・クルス コンセプトストア ポルト",
+    title: "アクセス・お問い合わせ | ポント・クルス（ポルトのギフトショップ）",
     description:
-      "ポルトのポント・クルス コンセプトストアにお気軽にお問い合わせください。",
+      "ポルト中心部にあるポント・クルスへの行き方、営業時間はこちら。商品の在庫確認や配送についてもお気軽にお問い合わせください。",
   },
 };
 

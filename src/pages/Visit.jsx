@@ -6,24 +6,24 @@ import "./Visit.css";
 
 const META = {
   pt: {
-    title: "Como Chegar | Ponto Cruz — Rua Nasoni, Porto",
+    title: "Como Chegar à Ponto Cruz | Loja de Presentes junto aos Clérigos",
     description:
-      "Visite-nos na Rua Arquiteto Nicolau Nasoni, 11 no Porto. Horários, transportes, estacionamento e tudo o que precisas de saber.",
+      "Visite a Ponto Cruz na Rua Arquiteto Nicolau Nasoni, 11, junto à Torre dos Clérigos. Saiba como chegar, onde estacionar e os horários da nossa concept store no Porto.",
   },
   en: {
-    title: "Visit Us | Ponto Cruz Porto — Address & Opening Hours",
+    title: "Visit Ponto Cruz Porto | Near Clérigos Tower & Lello Bookstore",
     description:
-      "Find us at Rua Arquiteto Nicolau Nasoni, 11 in Porto. Opening hours, transport links and parking info all in one place.",
+      "Find Ponto Cruz at Rua Arquiteto Nicolau Nasoni, 11. Located steps away from Clérigos Tower, we are the perfect stop for authentic Porto souvenirs and local design.",
   },
   ko: {
-    title: "방문하기 | 폰토 크루즈 포르투 — 주소 및 영업시간",
+    title: "포르투 폰토 크루즈 찾아오는 길 | 클레리구스 탑 근처 소품샵",
     description:
-      "포르투 Rua Arquiteto Nicolau Nasoni, 11에서 저희를 찾아오세요. 영업시간, 교통편, 주차 정보를 한곳에서 확인하세요.",
+      "렐루 서점과 클레리구스 탑 도보 1분 거리! 포르투 쇼핑 필수 코스인 폰토 크루즈의 위치, 영업시간, 가는 법을 확인하세요. (Rua Arquiteto Nicolau Nasoni 11)",
   },
   ja: {
-    title: "アクセス | ポント・クルス ポルト — 住所と営業時間",
+    title: "ポント・クルスへのアクセス | クレリゴス教会すぐそばの雑貨店",
     description:
-      "ポルトのRua Arquiteto Nicolau Nasoni, 11にあります。営業時間、交通アクセス、駐車場情報をまとめてご確認いただけます。",
+      "クレリゴスの塔やレロ書店からすぐ。ポルト中心部のコンセプトストア「ポント・クルス」への行き方、営業時間、周辺情報をご案内します。街歩きの合間にぜひお立ち寄りください。",
   },
 };
 

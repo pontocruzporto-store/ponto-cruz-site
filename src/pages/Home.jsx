@@ -10,24 +10,25 @@ import "./Home.css";
 // SEO metadata per language
 const META = {
   pt: {
-    title: "Ponto Cruz — Concept Store Autêntica no Porto",
+    title: "Ponto Cruz Porto | Concept Store de Artesanato e Design Português",
     description:
-      "Souvenirs autênticos e marcas portuguesas independentes no Porto. Uma loja familiar com produtos de qualidade, design local e identidade portuguesa.",
+      "A sua loja de souvenirs autênticos no Porto. Descubra uma curadoria única de cerâmica, cortiça e marcas independentes numa concept store familiar no coração da cidade.",
   },
   en: {
-    title: "Ponto Cruz — Authentic Concept Store in Porto, Portugal",
+    title: "Ponto Cruz Porto | Best Authentic Souvenirs & Portuguese Gifts",
     description:
-      "Authentic Portuguese souvenirs and independent local brands in Porto. A family-run concept store with curated crafts, design and quality.",
+      "Discover Porto's hidden gem for authentic Portuguese gifts. Shop handmade ceramics, sustainable cork, and local design at our family-run concept store. Unique souvenirs made in Portugal.",
   },
   ko: {
-    title: "폰토 크루즈 — 포르투의 정품 콘셉트 스토어",
+    title:
+      "포르투 소품샵 폰토 크루즈 (Ponto Cruz Concept Store) | 포르투갈 쇼핑 리스트 추천",
     description:
-      "포르투에서 만나는 진짜 포르투갈 기념품과 독립 브랜드. 가족이 운영하는 콘셉트 스토어에서 엄선된 수공예품과 디자인 제품을 만나보세요.",
+      "포르투에서 가장 감성적인 소품샵! 핸드메이드 도자기, 코르크 지갑 등 포르투갈 여행 필수 기념품을 만나보세요. 현지인이 사랑하는 가족 운영 콘셉트 스토어.",
   },
   ja: {
-    title: "ポント・クルス — ポルト本格コンセプトストア",
+    title: "ポルトの雑貨店 ポント・クルス | 本場ポルトガルの伝統工芸とお土産",
     description:
-      "ポルトで見つける本物のポルトガルお土産と独立系ブランド。家族経営のコンセプトストアで厳選されたクラフトとデザインをご覧ください。",
+      "ポルトで見つける本物のお土産。職人手作りの陶磁器やコルク製品など、ポルトガルの手仕事が光る逸品を厳選。家族経営の温かみあふれるコンセプトストアです。",
   },
 };
 
