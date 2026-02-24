@@ -2,7 +2,7 @@
   command = "npm run build"
   publish = "dist"
 
-# Canonical URL: force HTTPS and non-www
+# ─── Canonical: força HTTPS e non-www ────────────────────────────────────────
 [[redirects]]
   from = "http://pontocruzconceptstore.pt/*"
   to = "https://pontocruzconceptstore.pt/:splat"
@@ -21,7 +21,178 @@
   status = 301
   force = true
 
-# Sitemap XML (must be before SPA fallback)
+# ─── Trailing slash: normaliza todas as URLs (remove o / final) ───────────────
+# Isto resolve o "Cópia sem página canônica selecionada pelo usuário" no Search
+# Console, que acontece quando /ko e /ko/ são tratadas como páginas distintas.
+[[redirects]]
+  from = "/pt/"
+  to = "/pt"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/"
+  to = "/en"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ko/"
+  to = "/ko"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ja/"
+  to = "/ja"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pt/about/"
+  to = "/pt/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/about/"
+  to = "/en/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ko/about/"
+  to = "/ko/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ja/about/"
+  to = "/ja/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pt/brands/"
+  to = "/pt/brands"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/brands/"
+  to = "/en/brands"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ko/brands/"
+  to = "/ko/brands"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ja/brands/"
+  to = "/ja/brands"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pt/visit/"
+  to = "/pt/visit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/visit/"
+  to = "/en/visit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ko/visit/"
+  to = "/ko/visit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ja/visit/"
+  to = "/ja/visit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pt/contact/"
+  to = "/pt/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/contact/"
+  to = "/en/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ko/contact/"
+  to = "/ko/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ja/contact/"
+  to = "/ja/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pt/blog/"
+  to = "/pt/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/blog/"
+  to = "/en/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ko/blog/"
+  to = "/ko/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ja/blog/"
+  to = "/ja/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pt/porto/"
+  to = "/pt/porto"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/porto/"
+  to = "/en/porto"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ko/porto/"
+  to = "/ko/porto"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ja/porto/"
+  to = "/ja/porto"
+  status = 301
+  force = true
+
+# ─── Sitemap XML (deve vir antes do fallback SPA) ────────────────────────────
 [[redirects]]
   from = "/sitemap_index.xml"
   to = "/sitemap_index.xml"
@@ -34,12 +205,13 @@
   status = 200
   force = true
 
-# SPA fallback
+# ─── SPA fallback (deve ser SEMPRE o último redirect) ────────────────────────
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
+# ─── Headers de segurança ────────────────────────────────────────────────────
 [[headers]]
   for = "/*"
   [headers.values]
@@ -47,7 +219,7 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Cache de longa duracao para assets com hash (JS, CSS)
+# Cache de longa duração para assets com hash (JS, CSS)
 [[headers]]
   for = "/assets/*"
   [headers.values]
