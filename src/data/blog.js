@@ -101,5 +101,38 @@ export default [
       },
     },
   },
+  {
+    slug: "o-que-trazer-do-porto-guia-souvenirs-autenticos",
+    date: "2026-02-24",
+    image: "/images/blogs/porto-souvenirs-guide-1200.webp",
+    translations: {
+      pt: {
+        title: "O que trazer do Porto? Guia de Lembranças Autênticas e Únicas",
+        excerpt:
+          "Fuja dos clichés e descubra o que realmente vale a pena trazer do Porto. Do design contemporâneo à gastronomia, estas são as peças que contam a história da nossa cidade.",
+        body: "Ao caminhar pelo Porto, é fácil deixar-se levar pelas montras coloridas. Mas o que define um souvenir que realmente vale a pena? Para quem procura algo genuíno, a escolha deve recair sobre o que é feito localmente, com materiais nobres e alma portuguesa.\n\n### 1. Cerâmica de Autor e Design Contemporâneo\nA cerâmica é a face do Porto. Além dos azulejos, procure peças de design moderno que reinterpretam a tradição. Na **Ponto Cruz Concept Store**, selecionamos objetos que equilibram a herança visual da cidade com uma estética minimalista e funcional para a casa moderna.\n\n### 2. Têxteis de Qualidade: Burel e Algodão\nPortugal tem uma das melhores indústrias têxteis do mundo. Uma manta de burel (lã tradicional da serra) ou uma peça de vestuário em algodão orgânico de produtores do norte são investimentos em qualidade que duram décadas.\n\n### 3. Conservas Gourmet e Vinhos de Pequena Produção\nUma lata de sardinhas não é apenas comida; é uma peça de arte gráfica. Combine-a com uma garrafa de Vinho do Porto de uma 'Quinta' menos conhecida para levar consigo um sabor que não encontrará em qualquer supermercado internacional.",
+      },
+      en: {
+        title:
+          "What to Buy in Porto: The Ultimate Guide to Authentic Souvenirs",
+        excerpt:
+          "Looking for the best Porto souvenirs? Discover a curated selection of authentic Portuguese gifts, from artisanal crafts to world-class Port wine.",
+        body: "Porto is a city of makers. When choosing what to bring home, look for items that reflect the city's rich history and its modern creative spirit. Here is our curated list of must-have items for 2026.\n\n### 1. Port Wine from Independent Estates\nInstead of the big names you see everywhere, seek out Port wine from small, independent 'Quintas' in the Douro Valley. These limited productions offer a unique profile that truly represents the terroir of the region.\n\n### 2. Eco-Friendly Cork Design\nAs the world’s leading cork producer, Portugal has turned this sustainable material into high-fashion accessories. Look for cork-based stationery or minimalist bags that are both durable and environmentally conscious.\n\n### 3. Artisanal Soap and Fragrances\nPortuguese soaps are world-renowned for their creamy lather and vintage-inspired packaging. They are small, easy to pack, and carry the scent of Portugal’s botanical heritage. At **Ponto Cruz**, we focus on brands that maintain these traditional methods with a modern twist.",
+      },
+      ko: {
+        title: "포르투 쇼핑 리스트: 꼭 사야 할 포르투갈 기념품 TOP 5",
+        excerpt:
+          "포르투갈 여행의 추억을 담아갈 특별한 기념품을 찾고 계신가요? 포르투에서만 만날 수 있는 감각적인 쇼핑 아이템을 소개합니다.",
+        body: "포르투 여행의 즐거움 중 하나는 한국에서는 찾아보기 힘든 독특하고 감각적인 아이템을 발견하는 것입니다. 포르투를 방문하는 여행객들이 가장 선호하는 최고의 기념품 리스트를 정리했습니다.\n\n### 1. 포르투갈 천연 비누와 향수 (왕실 비누)\n포르투갈은 고품질 천연 비누로 유명합니다. 정교한 패키징 덕분에 선물용으로 가장 인기가 많으며, 욕실에 두는 것만으로도 포르투의 향기를 추억할 수 있습니다.\n\n### 2. 프리미엄 코르크 제품\n전 세계 코르크 생산량 1위인 포르투갈답게, 가죽보다 가볍고 튼튼한 코르크 지갑이나 액세서리는 필수 구매 아이템입니다. 친환경적이면서도 세련된 디자인을 만나보세요.\n\n### 3. 정어리 통조림과 디자인 소품\n예술적인 캔 디자인으로 유명한 포르투갈 통조림은 훌륭한 인테리어 소품이 됩니다. **Ponto Cruz Concept Store**에서는 현지 디자이너들의 손길이 닿은 유니크한 세라믹과 소품들을 한곳에서 만나보실 수 있습니다.",
+      },
+      ja: {
+        title:
+          "ポルトでおすすめのお土産ガイド：伝統とデザインが息づく至高の逸品",
+        excerpt:
+          "ポルトガル・ポルトで見つける、長く愛用したい上質なお土産。伝統工芸から美食まで、プロが厳選したショッピングリストをご紹介します。",
+        body: "ポルトの街には、職人のこだわりが詰まった素晴らしい品々があふれています。単なる思い出の品ではなく、日常を彩る上質なアイテムを自分へのご褒美や大切な方へ持ち帰りませんか？\n\n### 1. 職人技が光るアズレージョと陶器\nポルトガルの代名詞であるタイル（アズレージョ）や陶器。量産品にはない、手描きならではの温かみと絶妙な色の変化を楽しめる一点ものを探すのがポルト流です。\n\n### 2. 伝統的なテキスタイルと高品質なコットン\nポルトガル北部は繊維産業の聖地です。肌触りの良いオーガニックコットンの製品や、伝統的なウール素材「ブレル」を使った小物は、その品質の高さに驚かされるはずです。\n\n### 3. コンセプトストアで探す「今のポルト」\n伝統を大切にしながらも、現代的なセンスを融合させた雑貨を探すなら、**Ponto Cruz Concept Store**のようなセレクトショップが最適です。現地でしか手に入らない、ストーリーのあるお土産がきっと見つかります。",
+      },
+    },
+  },
   // add more objects for more posts
 ];
