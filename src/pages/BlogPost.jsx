@@ -4,7 +4,9 @@ import { Link, useParams, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useLanguage } from "../utils/LanguageContext";
 import blogData from "../data/blog";
+import brandsData from "../data/brands";
 import OptimizedImage from "../components/OptimizedImage";
+import { breadcrumbSchema } from "../utils/seo";
 import "./BlogPost.css";
 
 // Lazy-loaded: markdown parser only loads when a blog post is visited
@@ -34,6 +36,15 @@ const BlogPost = () => {
   const imageUrl = post.image
     ? `${BASE}${post.image.startsWith("/") ? "" : "/"}${post.image}`
     : `${BASE}/images/hero/hero-image-1200.webp`;
+  const relatedPosts = blogData
+    .filter((item) => item.slug !== post.slug)
+    .slice(0, 3);
+  const featuredBrands = brandsData.slice(0, 3);
+  const breadcrumb = breadcrumbSchema([
+    { name: "Home", path: `/${language}` },
+    { name: t("nav.blog"), path: `/${language}/blog` },
+    { name: content.title, path: `/${language}/blog/${slug}` },
+  ]);
 
   // Article schema for Google Discover and rich results
   const articleSchema = {
@@ -93,6 +104,7 @@ const BlogPost = () => {
         <script type="application/ld+json">
           {JSON.stringify(articleSchema)}
         </script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
       </Helmet>
 
       <article className="blog-post">
@@ -128,6 +140,64 @@ const BlogPost = () => {
               </ReactMarkdown>
             </Suspense>
           </div>
+
+          <aside className="blog-post-links">
+            <div className="blog-link-panel">
+              <div>
+                <h2>{language === "pt" ? "Visite a loja" : "Visit the store"}</h2>
+                <p>
+                  {language === "pt"
+                    ? "Veja produtos portugueses autenticos na Ponto Cruz, no centro do Porto."
+                    : "Find authentic Portuguese products at Ponto Cruz in central Porto."}
+                </p>
+              </div>
+              <Link to={`/${language}/visit`} className="button">
+                {t("nav.visit")}
+              </Link>
+            </div>
+
+            {featuredBrands.length > 0 && (
+              <div className="blog-related-block">
+                <h2>{language === "pt" ? "Marcas na loja" : "Brands in store"}</h2>
+                <div className="blog-related-list">
+                  {featuredBrands.map((brand) => {
+                    const brandContent =
+                      brand.translations[language] || brand.translations.pt;
+                    return (
+                      <Link
+                        key={brand.slug}
+                        to={`/${language}/brands/${brand.slug}`}
+                      >
+                        {brandContent.name}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {relatedPosts.length > 0 && (
+              <div className="blog-related-block">
+                <h2>
+                  {language === "pt" ? "Artigos relacionados" : "Related posts"}
+                </h2>
+                <div className="blog-related-list">
+                  {relatedPosts.map((item) => {
+                    const itemContent =
+                      item.translations[language] || item.translations.pt;
+                    return (
+                      <Link
+                        key={item.slug}
+                        to={`/${language}/blog/${item.slug}`}
+                      >
+                        {itemContent.title}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+          </aside>
         </div>
       </article>
     </div>

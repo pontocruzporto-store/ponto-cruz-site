@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useLanguage } from "../utils/LanguageContext";
 import visitInfo from "../data/visitInfo";
+import { BASE_URL, breadcrumbSchema, faqSchema } from "../utils/seo";
 import "./Visit.css";
 
 const META = {
@@ -32,12 +33,48 @@ const Visit = () => {
   const info = visitInfo.translations[language];
   const coords = visitInfo.coordinates;
   const meta = META[language] || META.pt;
+  const pageUrl = `${BASE_URL}/${language}/visit`;
+  const schemas = [
+    breadcrumbSchema([
+      { name: "Home", path: `/${language}` },
+      { name: t("nav.visit"), path: `/${language}/visit` },
+    ]),
+    faqSchema([
+      {
+        question: "Where is Ponto Cruz Concept Store?",
+        answer:
+          "Ponto Cruz is at Rua Arquitecto Nicolau Nasoni, 11, 4050-423 Porto, Portugal, near Clerigos Tower and Lello Bookstore.",
+      },
+      {
+        question: "What are the opening hours?",
+        answer: "Ponto Cruz is open Monday to Sunday from 11:00 to 19:00.",
+      },
+      {
+        question: "How can I contact the store?",
+        answer:
+          "You can call +351 912 305 495 or email conceptstore.cruz@gmail.com.",
+      },
+    ]),
+  ];
 
   return (
     <div className="visit-page">
       <Helmet>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta
+          property="og:image"
+          content={`${BASE_URL}/images/hero/porto_photo-1200.webp`}
+        />
+        {schemas.map((schema, index) => (
+          <script key={index} type="application/ld+json">
+            {JSON.stringify(schema)}
+          </script>
+        ))}
       </Helmet>
 
       <section className="page-hero">

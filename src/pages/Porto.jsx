@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { useLanguage } from "../utils/LanguageContext";
 import placesData from "../data/places";
 import OptimizedImage from "../components/OptimizedImage";
+import { BASE_URL, breadcrumbSchema, placeSchema } from "../utils/seo";
 import "./Porto.css";
 
 const META = {
@@ -32,6 +33,23 @@ const Porto = () => {
   const { language, t } = useLanguage();
   const [filter, setFilter] = useState("all");
   const meta = META[language] || META.pt;
+  const pageUrl = `${BASE_URL}/${language}/porto`;
+  const schemas = [
+    breadcrumbSchema([
+      { name: "Home", path: `/${language}` },
+      { name: t("nav.porto"), path: `/${language}/porto` },
+    ]),
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: meta.title,
+      itemListElement: placesData.map((place, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: placeSchema(place, language, `/${language}/porto`),
+      })),
+    },
+  ];
 
   const filteredPlaces =
     filter === "all"
@@ -43,6 +61,19 @@ const Porto = () => {
       <Helmet>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta
+          property="og:image"
+          content={`${BASE_URL}/images/hero/porto_photo-1200.webp`}
+        />
+        {schemas.map((schema, index) => (
+          <script key={index} type="application/ld+json">
+            {JSON.stringify(schema)}
+          </script>
+        ))}
       </Helmet>
 
       <section className="page-hero">

@@ -35,8 +35,8 @@
 # NÃO adicionar regras force=true para ficheiros estáticos — cria loops.
 [[redirects]]
   from   = "/*"
-  to     = "/index.html"
-  status = 200
+  to     = "/404.html"
+  status = 404
 
 # ─── Headers de segurança ────────────────────────────────────────────────────
 [[headers]]

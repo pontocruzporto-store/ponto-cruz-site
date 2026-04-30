@@ -139,3 +139,62 @@
   line-height: 1.6;
   margin: 0;
 }
+
+.brand-next-steps {
+  border-top: 1px solid var(--color-border);
+}
+
+.brand-link-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg) 0;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--spacing-xl);
+}
+
+.brand-link-panel h2 {
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.brand-link-panel p {
+  color: var(--color-grey-mid);
+  margin: 0;
+}
+
+.related-brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.related-brand-card {
+  color: inherit;
+}
+
+.related-brand-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: var(--color-white);
+  margin-bottom: var(--spacing-sm);
+}
+
+.related-brand-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.related-brand-card p {
+  color: var(--color-grey-mid);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .brand-link-panel {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

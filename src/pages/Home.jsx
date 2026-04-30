@@ -4,7 +4,9 @@ import { Helmet } from "react-helmet-async";
 import { useLanguage } from "../utils/LanguageContext";
 import brandsData from "../data/brands";
 import placesData from "../data/places";
+import blogData from "../data/blog";
 import OptimizedImage from "../components/OptimizedImage";
+import { BASE_URL } from "../utils/seo";
 import "./Home.css";
 
 // SEO metadata per language
@@ -35,6 +37,7 @@ const META = {
 const Home = () => {
   const { language, t } = useLanguage();
   const meta = META[language] || META.pt;
+  const pageUrl = `${BASE_URL}/${language}`;
 
   const featuredBrands = brandsData
     .filter((brand) => brand.featured)
@@ -42,12 +45,21 @@ const Home = () => {
   const featuredPlaces = placesData
     .filter((place) => place.featured)
     .slice(0, 3);
+  const featuredPosts = blogData.slice(0, 3);
 
   return (
     <div className="home">
       <Helmet>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta
+          property="og:image"
+          content={`${BASE_URL}/images/hero/hero-image-1200.webp`}
+        />
       </Helmet>
 
       {/* Hero Section */}
@@ -161,6 +173,45 @@ const Home = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {featuredPosts.length > 0 && (
+        <section className="section blog-preview">
+          <div className="container">
+            <div className="section-header">
+              <h2 className="section-title">{t("blog.title")}</h2>
+              <Link to={`/${language}/blog`} className="section-link">
+                {t("nav.blog")}
+              </Link>
+            </div>
+            <div className="places-grid">
+              {featuredPosts.map((post) => {
+                const content = post.translations[language] || post.translations.pt;
+                return (
+                  <Link
+                    key={post.slug}
+                    to={`/${language}/blog/${post.slug}`}
+                    className="place-card"
+                  >
+                    <div className="place-card-image">
+                      <OptimizedImage
+                        src={post.image}
+                        alt={content.title}
+                        sizes="(max-width: 768px) 100vw, 400px"
+                        width={800}
+                        height={533}
+                      />
+                    </div>
+                    <div className="place-card-content">
+                      <h3>{content.title}</h3>
+                      <p>{content.excerpt}</p>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>

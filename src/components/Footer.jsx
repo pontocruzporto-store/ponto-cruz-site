@@ -7,6 +7,13 @@ import "./Footer.css";
 const Footer = () => {
   const { language, t } = useLanguage();
   const info = visitInfo.translations[language];
+  const quickLinks = [
+    { path: `/${language}/visit`, label: t("nav.visit") },
+    { path: `/${language}/porto`, label: t("nav.porto") },
+    { path: `/${language}/blog`, label: t("nav.blog") },
+    { path: `/${language}/brands`, label: t("nav.brands") },
+    { path: `/${language}/about`, label: t("nav.about") },
+  ];
 
   return (
     <footer className="footer">
@@ -34,6 +41,17 @@ const Footer = () => {
             <p className="footer-text">
               <a href={`tel:${info.phone.replace(/\s/g, "")}`}>{info.phone}</a>
             </p>
+          </div>
+
+          <div className="footer-section">
+            <p className="footer-heading">Quick Links</p>
+            <nav className="footer-links" aria-label="Footer navigation">
+              {quickLinks.map((link) => (
+                <Link key={link.path} to={link.path} className="footer-link">
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
           </div>
 
           <div className="footer-section">

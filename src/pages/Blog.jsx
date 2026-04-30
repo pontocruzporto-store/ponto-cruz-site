@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { useLanguage } from "../utils/LanguageContext";
 import blogData from "../data/blog";
 import OptimizedImage from "../components/OptimizedImage";
+import { BASE_URL } from "../utils/seo";
 import "./Blog.css";
 
 const META = {
@@ -33,6 +34,7 @@ const META = {
 const Blog = () => {
   const { language, t } = useLanguage();
   const meta = META[language] || META.pt;
+  const pageUrl = `${BASE_URL}/${language}/blog`;
 
   const formatDate = (dateStr) => {
     const d = new Date(dateStr);
@@ -57,6 +59,14 @@ const Blog = () => {
       <Helmet>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta
+          property="og:image"
+          content={`${BASE_URL}/images/blogs/porto-souvenirs-guide-1200.webp`}
+        />
       </Helmet>
 
       <section className="page-hero">

@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import pt from '../locales/pt.json';
 import en from '../locales/en.json';
 import ko from '../locales/ko.json';
@@ -10,6 +11,7 @@ const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState('pt');
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Detect language from URL path
@@ -24,7 +26,7 @@ export const LanguageProvider = ({ children }) => {
     setLanguage(lang);
     const path = window.location.pathname;
     const newPath = path.replace(/^\/(pt|en|ko|ja)/, `/${lang}`);
-    window.history.pushState({}, '', newPath || `/${lang}`);
+    navigate(newPath || `/${lang}`);
   };
 
   const t = (key) => {

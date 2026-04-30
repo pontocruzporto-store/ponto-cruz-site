@@ -53,6 +53,22 @@
   gap: 0.5rem;
 }
 
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-link {
+  font-size: 0.95rem;
+  color: var(--color-grey-mid);
+  transition: var(--transition);
+}
+
+.footer-link:hover {
+  color: var(--color-black);
+}
+
 .social-link {
   font-size: 0.95rem;
   color: var(--color-grey-mid);
