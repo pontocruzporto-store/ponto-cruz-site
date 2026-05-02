@@ -4,31 +4,39 @@
     "about": "소개",
     "brands": "브랜드",
     "visit": "방문 안내",
-    "porto": "꼭 가볼 만한 곳",
+    "porto": "포르투 가이드",
     "blog": "블로그",
     "contact": "문의",
     "sitemap": "사이트맵"
   },
   "blog": {
     "title": "블로그",
-    "subtitle": "Ponto Cruz의 소식과 글",
-    "empty": "아직 글이 없습니다.",
-    "backToBlog": "블로그로 돌아가기"
+    "subtitle": "포르투에서 쇼핑하고 선물 고르고 둘러볼 때 도움이 되는 짧은 가이드",
+    "empty": "아직 글이 없습니다. 곧 매장과 포르투 가이드를 소개하겠습니다.",
+    "backToBlog": "블로그로 돌아가기",
+    "fallbackDescription": "포르투 Ponto Cruz Concept Store 블로그에서 이 글을 읽어 보세요.",
+    "loadingPost": "글을 불러오는 중...",
+    "visitStoreTitle": "매장 방문",
+    "visitStoreText": "포르투 중심의 Ponto Cruz에서 진정성 있는 포르투갈 제품을 만나 보세요.",
+    "brandsInStore": "매장의 브랜드",
+    "relatedPosts": "관련 글"
   },
   "hero": {
-    "tagline": "진정한 포르투갈 감성, 엄선된 선택",
-    "subtitle": "포르투갈 장인 정신과 포르투 전통을 기념하는 가족 운영 컨셉 스토어"
+    "tagline": "정성껏 고른 포르투갈의 물건들",
+    "subtitle": "포르투 중심에 있는 가족 운영 콘셉트 스토어입니다. 포르투갈 공예품, 독립 브랜드, 그리고 각 물건을 잘 아는 사람들이 고른 선택을 만날 수 있습니다."
   },
   "footer": {
     "address": "주소",
     "hours": "영업시간",
     "contact": "연락처",
     "follow": "팔로우",
+    "quickLinks": "둘러보기",
     "copyright": "© 2026 Ponto Cruz Concept Store. 모든 권리 보유."
   },
   "home": {
-    "viewAll": "전체 보기 →",
-    "explorePorto": "포르투 탐색 →"
+    "viewBrands": "브랜드 보기 →",
+    "readBlog": "가이드 읽기 →",
+    "explorePorto": "포르투 가이드 보기 →"
   },
   "about": {
     "title": "우리의 이야기",
@@ -47,15 +55,15 @@
     "philosophyBody2": "언제나 포르투갈, 특히 가능하다면 포르투에서 온 제품들을 찾으며, 우리 장인 정신과 전통의 가장 좋은 모습을 기념합니다."
   },
   "brands": {
-    "title": "브랜드",
-    "subtitle": "세심하게 선별된 포르투갈 장인과 브랜드",
-    "viewBrand": "브랜드 탐색",
+    "title": "우리가 고른 브랜드",
+    "subtitle": "매장에서 직접 알고 소개하는 포르투갈 장인과 브랜드입니다.",
+    "viewBrand": "브랜드 보기",
     "origin": "원산지",
     "philosophy": "철학",
     "productsTitle": "제품"
   },
   "visit": {
-    "title": "방문 안내",
+    "title": "매장 방문",
     "address": "주소",
     "hours": "영업시간",
     "transport": "오시는 길",
@@ -65,27 +73,27 @@
     "nearbyTitle": "주변 명소"
   },
   "porto": {
-    "title": "꼭 가볼 만한 곳",
-    "subtitle": "포르투 개인 가이드",
+    "title": "포르투 가이드",
+    "subtitle": "매장을 찾는 분들께 추천하는 주변 장소",
     "filterAll": "전체",
     "filterVisit": "방문할 곳",
     "filterEat": "식사할 곳",
     "category": "카테고리",
     "location": "위치",
     "tipLabel": "팁:",
-    "directionsLabel": "길찾기 →"
+    "directionsLabel": "지도에서 보기 →"
   },
   "contact": {
     "title": "문의하기",
-    "subtitle": "궁금한 점이 있으신가요? 연락 주세요.",
+    "subtitle": "브랜드, 재고, 매장 위치가 궁금하시면 편하게 연락 주세요.",
     "name": "이름",
-    "email": "이메일",
-    "message": "메시지",
+    "email": "이메일 주소",
+    "message": "어떤 도움이 필요하신가요?",
     "send": "메시지 보내기",
-    "success": "메시지가 성공적으로 전송되었습니다!",
-    "error": "메시지 전송 중 오류가 발생했습니다. 다시 시도해 주세요.",
-    "sending": "전송 중...",
-    "visitUsTitle": "방문 안내",
+    "success": "메시지를 받았습니다. 가능한 한 빨리 답장드리겠습니다.",
+    "error": "메시지를 보내지 못했습니다. 다시 시도하거나 conceptstore.cruz@gmail.com 으로 이메일을 보내 주세요.",
+    "sending": "메시지 전송 중...",
+    "visitUsTitle": "매장 주소",
     "openingHoursTitle": "영업시간",
     "getInTouchTitle": "문의하기",
     "followUsTitle": "팔로우",
@@ -93,9 +101,9 @@
     "facebook": "페이스북"
   },
   "cookie": {
-    "message": "사용자 경험 개선 및 사이트 트래픽 분석을 위해 쿠키를 사용합니다. 수락하시면 쿠키 사용에 동의하는 것입니다.",
-    "accept": "수락",
-    "decline": "거부",
+    "message": "사이트 이용 방식을 이해하기 위해 분석 쿠키를 사용합니다. 쿠키를 허용하거나 쿠키 없이 계속 이용할 수 있습니다.",
+    "accept": "쿠키 허용",
+    "decline": "쿠키 없이 계속",
     "learn": "자세히 알아보기"
   }
 }

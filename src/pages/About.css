@@ -6,7 +6,7 @@
 
 .page-hero h1 {
   text-align: center;
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: var(--text-page-title);
   margin-bottom: 0;
   color: var(--color-cream);
 }
@@ -41,13 +41,13 @@
 }
 
 .about-text h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: var(--text-section-title);
   margin-bottom: var(--spacing-md);
 }
 
 .about-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: var(--text-lead);
+  line-height: var(--leading-longform);
   color: var(--color-grey-mid);
   margin-bottom: var(--spacing-md);
 }

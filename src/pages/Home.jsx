@@ -78,6 +78,27 @@ const Home = () => {
         <div className="hero-content">
           <h1 className="hero-tagline">{t("hero.tagline")}</h1>
           <p className="hero-subtitle">{t("hero.subtitle")}</p>
+          <div className="hero-actions">
+            <Link to={`/${language}/visit`} className="button hero-visit-button">
+              {t("nav.visit")}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="visit-strip" aria-label={t("visit.title")}>
+        <div className="container visit-strip-grid">
+          <div>
+            <span>{t("visit.address")}</span>
+            <p>Rua Arquitecto Nicolau Nasoni, 11</p>
+          </div>
+          <div>
+            <span>{t("visit.hours")}</span>
+            <p>11h00 - 19h00</p>
+          </div>
+          <Link to={`/${language}/visit`} className="visit-strip-link">
+            {t("nav.visit")}
+          </Link>
         </div>
       </section>
 
@@ -112,7 +133,7 @@ const Home = () => {
             <div className="section-header">
               <h2 className="section-title">{t("brands.title")}</h2>
               <Link to={`/${language}/brands`} className="section-link">
-                {t("home.viewAll")}
+                {t("home.viewBrands")}
               </Link>
             </div>
             <div className="brands-grid">
@@ -184,7 +205,7 @@ const Home = () => {
             <div className="section-header">
               <h2 className="section-title">{t("blog.title")}</h2>
               <Link to={`/${language}/blog`} className="section-link">
-                {t("nav.blog")}
+                {t("home.readBlog")}
               </Link>
             </div>
             <div className="places-grid">

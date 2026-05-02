@@ -20,11 +20,11 @@
 
 .form-group label {
   display: block;
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
+  font-family: var(--font-heading);
+  font-size: var(--text-small);
   font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--color-black);
   margin-bottom: var(--spacing-sm);
 }
@@ -32,7 +32,7 @@
 .form-group input,
 .form-group textarea {
   width: 100%;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 1rem;
   padding: 1rem;
   border: 1px solid var(--color-border);
@@ -56,20 +56,20 @@
 .form-message {
   margin-top: var(--spacing-md);
   padding: var(--spacing-sm);
-  font-size: 0.95rem;
+  font-size: var(--text-small);
   text-align: center;
 }
 
 .form-message.success {
-  background: #e8f5e9;
-  color: #2e7d32;
-  border: 1px solid #4caf50;
+  background: var(--color-success-bg);
+  color: var(--color-success-text);
+  border: 1px solid var(--color-success-border);
 }
 
 .form-message.error {
-  background: #ffebee;
-  color: #c62828;
-  border: 1px solid #f44336;
+  background: var(--color-error-bg);
+  color: var(--color-error-text);
+  border: 1px solid var(--color-error-border);
 }
 
 .contact-info-wrapper {
@@ -85,10 +85,11 @@
 }
 
 .contact-info-card h3 {
-  font-size: 1rem;
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
   font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--color-black);
   margin-bottom: var(--spacing-md);
 }
@@ -106,6 +107,9 @@
 }
 
 .contact-info-card a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   color: var(--color-grey-mid);
   transition: var(--transition);
 }
@@ -121,7 +125,10 @@
 }
 
 .social-links-vertical a {
-  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: var(--text-body);
   color: var(--color-grey-mid);
   transition: var(--transition);
 }

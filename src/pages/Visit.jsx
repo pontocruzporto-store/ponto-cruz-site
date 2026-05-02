@@ -32,6 +32,8 @@ const Visit = () => {
   const { language, t } = useLanguage();
   const info = visitInfo.translations[language];
   const coords = visitInfo.coordinates;
+  const mapQuery = encodeURIComponent(visitInfo.mapQuery);
+  const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${mapQuery}`;
   const meta = META[language] || META.pt;
   const pageUrl = `${BASE_URL}/${language}/visit`;
   const schemas = [
@@ -89,7 +91,7 @@ const Visit = () => {
             {/* Map */}
             <div className="map-container">
               <iframe
-                src={`https://www.google.com/maps?q=${coords.lat},${coords.lng}&z=${coords.zoom}&output=embed`}
+                src={`https://www.google.com/maps?q=${mapQuery}&z=${coords.zoom}&output=embed`}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -113,6 +115,14 @@ const Visit = () => {
                     {info.phone}
                   </a>
                 </p>
+                <a
+                  className="directions-button"
+                  href={directionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("porto.directionsLabel")}
+                </a>
               </div>
 
               {/* Hours */}

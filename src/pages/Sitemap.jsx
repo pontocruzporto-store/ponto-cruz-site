@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useLanguage } from "../utils/LanguageContext";
 import brandsData from "../data/brands";
@@ -9,38 +9,37 @@ import "./Sitemap.css";
 const labels = {
   pt: {
     title: "Mapa do site",
-    subtitle: "Links para todas as paginas do site.",
-    pages: "Paginas",
+    subtitle: "Todos os caminhos principais para explorar a Ponto Cruz.",
+    pages: "Páginas",
     brands: "Marcas",
     blog: "Blog",
   },
   en: {
     title: "Sitemap",
-    subtitle: "Links to all pages on the site.",
+    subtitle: "All the main paths for exploring Ponto Cruz.",
     pages: "Pages",
     brands: "Brands",
     blog: "Blog",
   },
   ko: {
-    title: "Sitemap",
-    subtitle: "Links to all pages on the site.",
-    pages: "Pages",
-    brands: "Brands",
-    blog: "Blog",
+    title: "사이트맵",
+    subtitle: "Ponto Cruz를 둘러보는 주요 경로입니다.",
+    pages: "페이지",
+    brands: "브랜드",
+    blog: "블로그",
   },
   ja: {
-    title: "Sitemap",
-    subtitle: "Links to all pages on the site.",
-    pages: "Pages",
-    brands: "Brands",
-    blog: "Blog",
+    title: "サイトマップ",
+    subtitle: "Ponto Cruz を見るための主なページです。",
+    pages: "ページ",
+    brands: "ブランド",
+    blog: "ブログ",
   },
 };
 
 const Sitemap = () => {
-  const { language } = useParams();
+  const { language, t } = useLanguage();
   const lang = language || "pt";
-  const { t } = useLanguage();
   const base = `/${lang}`;
   const copy = labels[lang] || labels.pt;
 

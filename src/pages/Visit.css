@@ -1,35 +1,43 @@
 .visit-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-xl);
+  grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+  gap: clamp(var(--spacing-lg), 5vw, var(--spacing-2xl));
+  align-items: start;
 }
 
 .map-container {
   position: sticky;
   top: calc(73px + var(--spacing-md));
-  height: 600px;
+  height: min(68vh, 620px);
   background: var(--color-grey-light);
   border: 1px solid var(--color-border);
   overflow: hidden;
 }
 
 .visit-info-cards {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-lg);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-md);
+  min-width: 0;
 }
 
 .info-card {
   background: var(--color-white);
-  padding: var(--spacing-lg);
+  padding: clamp(var(--spacing-md), 2.5vw, var(--spacing-lg));
   border: 1px solid var(--color-border);
+  min-width: 0;
+}
+
+.visit-info-cards .info-card:first-child {
+  grid-column: 1 / -1;
 }
 
 .info-card h3 {
+  font-family: var(--font-heading);
   font-size: 1rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--color-black);
   margin-bottom: var(--spacing-md);
 }
@@ -69,12 +77,34 @@
 }
 
 .contact-info a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   color: var(--color-grey-mid);
   transition: var(--transition);
 }
 
 .contact-info a:hover {
   color: var(--color-black);
+}
+
+.directions-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-top: var(--spacing-md);
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-black);
+  font-size: var(--text-small);
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.directions-button:hover {
+  background: var(--color-black);
+  color: var(--color-cream);
 }
 
 @media (max-width: 968px) {
@@ -90,6 +120,11 @@
   }
 
   .visit-info-cards {
+    grid-template-columns: 1fr;
     order: 1;
+  }
+
+  .directions-button {
+    width: 100%;
   }
 }

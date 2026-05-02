@@ -4,31 +4,39 @@
     "about": "私たちについて",
     "brands": "ブランド",
     "visit": "ご来店案内",
-    "porto": "ぜひ訪れたい場所",
+    "porto": "ポルトガイド",
     "blog": "ブログ",
     "contact": "お問い合わせ",
     "sitemap": "サイトマップ"
   },
   "blog": {
     "title": "ブログ",
-    "subtitle": "Ponto Cruzの記事とお知らせ",
-    "empty": "まだ記事はありません。",
-    "backToBlog": "ブログに戻る"
+    "subtitle": "ポルトでの買い物、贈り物選び、街歩きに役立つ短いガイド",
+    "empty": "まだ記事はありません。ショップとポルトのガイドを近日公開予定です。",
+    "backToBlog": "ブログに戻る",
+    "fallbackDescription": "ポルトの Ponto Cruz Concept Store ブログでこの記事をお読みください。",
+    "loadingPost": "記事を読み込んでいます...",
+    "visitStoreTitle": "お店へ行く",
+    "visitStoreText": "ポルト中心部の Ponto Cruz で、本物のポルトガル製品をご覧ください。",
+    "brandsInStore": "店で扱うブランド",
+    "relatedPosts": "関連記事"
   },
   "hero": {
-    "tagline": "本物のポルトガル品質、厳選された逸品",
-    "subtitle": "ポルトガルの職人技とポルトの伝統を祝う家族経営のコンセプトストア"
+    "tagline": "丁寧に選んだポルトガルの品々",
+    "subtitle": "ポルト中心部にある家族経営のコンセプトストア。ポルトガルの工芸品、独立ブランド、一点ずつをよく知る私たちが選んだ品を紹介しています。"
   },
   "footer": {
     "address": "住所",
     "hours": "営業時間",
     "contact": "連絡先",
     "follow": "フォロー",
+    "quickLinks": "見る",
     "copyright": "© 2026 Ponto Cruz Concept Store. 無断転載禁止。"
   },
   "home": {
-    "viewAll": "すべて見る →",
-    "explorePorto": "ポルトをもっと見る →"
+    "viewBrands": "ブランドを見る →",
+    "readBlog": "ガイドを読む →",
+    "explorePorto": "ポルトガイドを見る →"
   },
   "about": {
     "title": "私たちの物語",
@@ -47,15 +55,15 @@
     "philosophyBody2": "私たちは常にポルトガル産、できればポルト産のものを選び、職人技と伝統の最も素晴らしい部分を讃えています."
   },
   "brands": {
-    "title": "ブランド",
-    "subtitle": "厳選されたポルトガルの職人とブランド",
+    "title": "私たちが選ぶブランド",
+    "subtitle": "店で実際に紹介している、信頼できるポルトガルの職人とブランドです。",
     "viewBrand": "ブランドを見る",
     "origin": "原産地",
     "philosophy": "哲学",
     "productsTitle": "商品"
   },
   "visit": {
-    "title": "ご来店案内",
+    "title": "お店へ行く",
     "address": "住所",
     "hours": "営業時間",
     "transport": "アクセス",
@@ -65,27 +73,27 @@
     "nearbyTitle": "周辺の名所"
   },
   "porto": {
-    "title": "ぜひ訪れたい場所",
-    "subtitle": "私たちのポルトガイド",
+    "title": "ポルトガイド",
+    "subtitle": "ご来店くださる方におすすめしている周辺スポット",
     "filterAll": "すべて",
     "filterVisit": "訪れる場所",
     "filterEat": "食事する場所",
     "category": "カテゴリー",
     "location": "場所",
     "tipLabel": "おすすめ:",
-    "directionsLabel": "行き方を見る →"
+    "directionsLabel": "地図で見る →"
   },
   "contact": {
     "title": "お問い合わせ",
-    "subtitle": "ご質問がありますか？お気軽にお問い合わせください。",
-    "name": "名前",
-    "email": "メール",
-    "message": "メッセージ",
-    "send": "送信",
-    "success": "メッセージが正常に送信されました！",
-    "error": "メッセージの送信中にエラーが発生しました。もう一度お試しください。",
+    "subtitle": "ブランド、在庫、お店への行き方についてお気軽にご相談ください。",
+    "name": "お名前",
+    "email": "メールアドレス",
+    "message": "お問い合わせ内容",
+    "send": "メッセージを送る",
+    "success": "メッセージを受け付けました。できるだけ早く返信いたします。",
+    "error": "メッセージを送信できませんでした。もう一度試すか、conceptstore.cruz@gmail.com へメールしてください。",
     "sending": "送信中...",
-    "visitUsTitle": "ご来店案内",
+    "visitUsTitle": "お店の住所",
     "openingHoursTitle": "営業時間",
     "getInTouchTitle": "お問い合わせ",
     "followUsTitle": "フォローする",
@@ -93,9 +101,9 @@
     "facebook": "Facebook"
   },
   "cookie": {
-    "message": "当サイトでは、ユーザー体験の向上とサイトトラフィックの分析のためにクッキーを使用しています。同意することで、クッキーの使用に同意したことになります。",
-    "accept": "同意する",
-    "decline": "拒否",
+    "message": "サイトの利用状況を知るために分析用クッキーを使用します。許可するか、クッキーなしで続けるかを選べます。",
+    "accept": "クッキーを許可",
+    "decline": "クッキーなしで続ける",
     "learn": "詳細"
   }
 }

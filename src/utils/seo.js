@@ -18,11 +18,6 @@ export const localBusinessSchema = (url = BASE_URL) => ({
     postalCode: "4050-423",
     addressCountry: "PT",
   },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 41.14553,
-    longitude: -8.6135,
-  },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",

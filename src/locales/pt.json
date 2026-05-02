@@ -4,31 +4,39 @@
     "about": "Sobre Nós",
     "brands": "Marcas",
     "visit": "Visite-nos",
-    "porto": "Vale a Pena Visitar",
+    "porto": "Guia do Porto",
     "blog": "Blog",
     "contact": "Contacto",
     "sitemap": "Mapa do site"
   },
   "blog": {
     "title": "Blog",
-    "subtitle": "Artigos e novidades da Ponto Cruz",
-    "empty": "Ainda não há artigos.",
-    "backToBlog": "Voltar ao blog"
+    "subtitle": "Guias curtos para comprar, oferecer e explorar o Porto com mais cuidado",
+    "empty": "Ainda não publicámos artigos. Volte em breve para guias da loja e da cidade.",
+    "backToBlog": "Voltar ao blog",
+    "fallbackDescription": "leia este artigo no blog da Ponto Cruz Concept Store no Porto.",
+    "loadingPost": "A carregar artigo...",
+    "visitStoreTitle": "Venha à loja",
+    "visitStoreText": "Veja produtos portugueses autênticos na Ponto Cruz, no centro do Porto.",
+    "brandsInStore": "Marcas na loja",
+    "relatedPosts": "Artigos relacionados"
   },
   "hero": {
-    "tagline": "Autenticamente Português, Criteriosamente Selecionado",
-    "subtitle": "Uma concept store familiar celebrando o artesanato português e as tradições do Porto"
+    "tagline": "Portugal escolhido com cuidado",
+    "subtitle": "Uma concept store familiar no centro do Porto, com artesanato português, marcas independentes e escolhas feitas por quem conhece cada peça."
   },
   "footer": {
     "address": "Morada",
     "hours": "Horário",
     "contact": "Contacto",
     "follow": "Siga-nos",
+    "quickLinks": "Explorar",
     "copyright": "© 2026 Ponto Cruz Concept Store. Todos os direitos reservados."
   },
   "home": {
-    "viewAll": "Ver tudo →",
-    "explorePorto": "Explorar o Porto →"
+    "viewBrands": "Ver marcas →",
+    "readBlog": "Ler guias →",
+    "explorePorto": "Ver o guia do Porto →"
   },
   "about": {
     "title": "A Nossa História",
@@ -47,45 +55,45 @@
     "philosophyBody2": "Procuramos sempre ter produtos portugueses, em especial do Porto quando possível, celebrando o melhor do nosso artesanato e das nossas tradições."
   },
   "brands": {
-    "title": "As Nossas Marcas",
-    "subtitle": "Artesãos e marcas portuguesas criteriosamente selecionadas",
-    "viewBrand": "Explorar Marca",
+    "title": "Marcas escolhidas por nós",
+    "subtitle": "Artesãos e marcas portuguesas que conhecemos, acompanhamos e recomendamos na loja.",
+    "viewBrand": "Ver marca",
     "origin": "Origem",
     "philosophy": "Filosofia",
     "productsTitle": "Produtos"
   },
   "visit": {
-    "title": "Visite-nos",
+    "title": "Venha à loja",
     "address": "Morada",
     "hours": "Horário",
-    "transport": "Como Chegar",
+    "transport": "Como chegar",
     "parking": "Estacionamento",
     "accessibility": "Acessibilidade",
     "languages": "Línguas Faladas",
     "nearbyTitle": "Pontos de referência próximos"
   },
   "porto": {
-    "title": "Definitivamente Vale a Pena Visitar",
-    "subtitle": "O nosso guia pessoal do Porto",
+    "title": "Guia do Porto",
+    "subtitle": "Lugares próximos que recomendamos a quem nos visita na loja",
     "filterAll": "Tudo",
     "filterVisit": "O Que Visitar",
     "filterEat": "Onde Comer",
     "category": "Categoria",
     "location": "Localização",
     "tipLabel": "Dica:",
-    "directionsLabel": "Obter direções →"
+    "directionsLabel": "Abrir no mapa →"
   },
   "contact": {
-    "title": "Entre em Contacto",
-    "subtitle": "Tem alguma questão? Adoraríamos ouvir de si.",
-    "name": "Nome",
-    "email": "Email",
-    "message": "Mensagem",
-    "send": "Enviar Mensagem",
-    "success": "Mensagem enviada com sucesso!",
-    "error": "Erro ao enviar mensagem. Por favor, tente novamente.",
-    "sending": "A enviar...",
-    "visitUsTitle": "Visite-nos",
+    "title": "Fale connosco",
+    "subtitle": "Pergunte por marcas, disponibilidade ou como nos encontrar no Porto.",
+    "name": "O seu nome",
+    "email": "O seu email",
+    "message": "Como podemos ajudar?",
+    "send": "Enviar mensagem",
+    "success": "Recebemos a sua mensagem. Respondemos assim que possível.",
+    "error": "Não foi possível enviar a mensagem. Tente novamente ou escreva para conceptstore.cruz@gmail.com.",
+    "sending": "A enviar mensagem...",
+    "visitUsTitle": "Morada da loja",
     "openingHoursTitle": "Horário",
     "getInTouchTitle": "Fale connosco",
     "followUsTitle": "Siga-nos",
@@ -93,9 +101,9 @@
     "facebook": "Facebook"
   },
   "cookie": {
-    "message": "Utilizamos cookies para melhorar a sua experiência e analisar o tráfego do site. Ao aceitar, concorda com o uso de cookies.",
-    "accept": "Aceitar",
-    "decline": "Recusar",
+    "message": "Usamos cookies de análise para perceber como o site é utilizado. Pode aceitar ou continuar sem estes cookies.",
+    "accept": "Aceitar cookies",
+    "decline": "Continuar sem cookies",
     "learn": "Saber Mais"
   }
 }

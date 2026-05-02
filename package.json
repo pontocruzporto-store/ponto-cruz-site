@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "node src/scripts/generate-sitemap.js && vite build && node src/scripts/prerender.js",
     "preview": "vite preview",
-    "export": "vite build && node scripts/generate-static.js"
+    "export": "npm run build"
   },
   "dependencies": {
     "@fontsource-variable/cormorant-garamond": "^5.2.6",

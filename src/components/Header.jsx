@@ -57,7 +57,7 @@ const Header = () => {
           />
         </Link>
 
-        <nav className={`nav ${isMobileMenuOpen ? "open" : ""}`}>
+        <nav id="primary-navigation" className={`nav ${isMobileMenuOpen ? "open" : ""}`}>
           {navItems.map((item) => (
             <Link
               key={item.key}
@@ -86,6 +86,8 @@ const Header = () => {
             className="mobile-menu-toggle"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="primary-navigation"
           >
             <span></span>
             <span></span>

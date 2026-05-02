@@ -30,7 +30,7 @@
 }
 
 .cookie-message {
-  font-size: 0.95rem;
+  font-size: var(--text-small);
   line-height: 1.5;
   margin: 0;
   flex: 1;
@@ -43,11 +43,12 @@
 }
 
 .cookie-button {
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-family: var(--font-heading);
+  font-size: var(--text-caption);
+  font-weight: 560;
+  letter-spacing: 0;
+  text-transform: none;
+  min-height: 44px;
   padding: 0.75rem 1.5rem;
   border: 1px solid var(--color-cream);
   background: transparent;

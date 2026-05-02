@@ -1,26 +1,38 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import pt from '../locales/pt.json';
 import en from '../locales/en.json';
 import ko from '../locales/ko.json';
 import ja from '../locales/ja.json';
 
 const translations = { pt, en, ko, ja };
+const supportedLanguages = Object.keys(translations);
+
+const getLanguageFromPath = () => {
+  if (typeof window === 'undefined') {
+    return 'pt';
+  }
+
+  const langMatch = window.location.pathname.match(/^\/(pt|en|ko|ja)(\/|$)/);
+  return langMatch && supportedLanguages.includes(langMatch[1])
+    ? langMatch[1]
+    : 'pt';
+};
 
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('pt');
+  const [language, setLanguage] = useState(getLanguageFromPath);
+  const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Detect language from URL path
-    const path = window.location.pathname;
-    const langMatch = path.match(/^\/(pt|en|ko|ja)/);
-    if (langMatch) {
-      setLanguage(langMatch[1]);
-    }
-  }, []);
+    setLanguage(getLanguageFromPath());
+  }, [location.pathname]);
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
 
   const changeLanguage = (lang) => {
     setLanguage(lang);

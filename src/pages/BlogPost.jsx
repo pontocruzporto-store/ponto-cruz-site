@@ -31,7 +31,7 @@ const BlogPost = () => {
   const pageTitle = `${content.title} | Blog Ponto Cruz Porto`;
   const pageDescription =
     content.excerpt ||
-    `${content.title} — lê este artigo no blog da Ponto Cruz Concept Store no Porto.`;
+    `${content.title}: ${t("blog.fallbackDescription")}`;
   const canonicalUrl = `${BASE}/${language}/blog/${slug}`;
   const imageUrl = post.image
     ? `${BASE}${post.image.startsWith("/") ? "" : "/"}${post.image}`
@@ -134,7 +134,7 @@ const BlogPost = () => {
           )}
 
           <div className="blog-post-body content-wrapper">
-            <Suspense fallback={<div />}>
+            <Suspense fallback={<p>{t("blog.loadingPost")}</p>}>
               <ReactMarkdown remarkPlugins={[remarkGfm]}>
                 {markdown}
               </ReactMarkdown>
@@ -144,12 +144,8 @@ const BlogPost = () => {
           <aside className="blog-post-links">
             <div className="blog-link-panel">
               <div>
-                <h2>{language === "pt" ? "Visite a loja" : "Visit the store"}</h2>
-                <p>
-                  {language === "pt"
-                    ? "Veja produtos portugueses autenticos na Ponto Cruz, no centro do Porto."
-                    : "Find authentic Portuguese products at Ponto Cruz in central Porto."}
-                </p>
+                <h2>{t("blog.visitStoreTitle")}</h2>
+                <p>{t("blog.visitStoreText")}</p>
               </div>
               <Link to={`/${language}/visit`} className="button">
                 {t("nav.visit")}
@@ -158,7 +154,7 @@ const BlogPost = () => {
 
             {featuredBrands.length > 0 && (
               <div className="blog-related-block">
-                <h2>{language === "pt" ? "Marcas na loja" : "Brands in store"}</h2>
+                <h2>{t("blog.brandsInStore")}</h2>
                 <div className="blog-related-list">
                   {featuredBrands.map((brand) => {
                     const brandContent =
@@ -178,9 +174,7 @@ const BlogPost = () => {
 
             {relatedPosts.length > 0 && (
               <div className="blog-related-block">
-                <h2>
-                  {language === "pt" ? "Artigos relacionados" : "Related posts"}
-                </h2>
+                <h2>{t("blog.relatedPosts")}</h2>
                 <div className="blog-related-list">
                   {relatedPosts.map((item) => {
                     const itemContent =

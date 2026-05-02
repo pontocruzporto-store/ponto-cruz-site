@@ -9,7 +9,6 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  /* max-width: 800px; */
   margin: 0 auto;
 }
 
@@ -41,12 +40,12 @@
 }
 
 .brand-hero h1 {
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: var(--text-page-title);
   margin-bottom: var(--spacing-md);
 }
 
 .brand-hero-tagline {
-  font-size: 1.25rem;
+  font-size: var(--text-lead);
   color: var(--color-grey-mid);
   margin: 0;
 }
@@ -61,15 +60,15 @@
 .brand-info-section h3 {
   font-size: 1rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   margin-bottom: var(--spacing-md);
   color: var(--color-grey-mid);
 }
 
 .brand-info-section p {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: var(--text-lead);
+  line-height: var(--leading-longform);
   color: var(--color-grey-dark);
 }
 
@@ -79,8 +78,8 @@
 }
 
 .brand-story p {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: var(--text-lead);
+  line-height: var(--leading-longform);
   color: var(--color-grey-mid);
   margin-bottom: var(--spacing-lg);
 }
@@ -129,12 +128,14 @@
 }
 
 .product-info h4 {
-  font-size: 1.25rem;
+  font-family: var(--font-heading);
+  font-size: var(--text-card-title);
+  font-weight: 560;
   margin-bottom: var(--spacing-sm);
 }
 
 .product-info p {
-  font-size: 0.95rem;
+  font-size: var(--text-small);
   color: var(--color-grey-mid);
   line-height: 1.6;
   margin: 0;
@@ -155,7 +156,7 @@
 }
 
 .brand-link-panel h2 {
-  font-size: 1.75rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   margin-bottom: var(--spacing-xs);
 }
 
@@ -183,7 +184,9 @@
 }
 
 .related-brand-card h3 {
-  font-size: 1.15rem;
+  font-family: var(--font-heading);
+  font-size: var(--text-lead);
+  font-weight: 560;
   margin-bottom: var(--spacing-xs);
 }
 

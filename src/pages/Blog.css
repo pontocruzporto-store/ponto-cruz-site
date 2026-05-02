@@ -1,6 +1,5 @@
 .blog-page .page-subtitle {
   text-align: center;
-  font-size: 1.2rem;
   color: var(--color-grey-mid);
   margin-top: var(--spacing-md);
   max-width: 600px;
@@ -53,21 +52,23 @@
 
 .blog-date {
   display: block;
-  font-size: 0.85rem;
+  font-size: var(--text-caption);
   font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--color-grey-mid);
   margin-bottom: var(--spacing-sm);
 }
 
 .blog-card-title {
-  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  font-size: var(--text-card-title);
+  font-weight: 560;
   margin-bottom: var(--spacing-sm);
 }
 
 .blog-card-excerpt {
-  font-size: 1rem;
+  font-size: var(--text-body);
   line-height: 1.6;
   color: var(--color-grey-mid);
   margin: 0;

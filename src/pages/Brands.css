@@ -1,17 +1,17 @@
 .page-subtitle {
-  text-align: center;
-  font-size: 1.2rem;
+  text-align: left;
   color: var(--color-grey-mid);
   margin-top: var(--spacing-md);
   max-width: 600px;
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
 }
 
 .brands-grid-large {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: var(--spacing-xl);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: clamp(var(--spacing-md), 3vw, var(--spacing-xl));
+  align-items: stretch;
 }
 
 .brand-card-large {
@@ -21,6 +21,7 @@
   border: 1px solid var(--color-border);
   overflow: hidden;
   transition: var(--transition);
+  min-width: 0;
 }
 
 .brand-card-large:hover {
@@ -30,11 +31,11 @@
 }
 
 .brand-card-image-large {
-  /* height: 500px; */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-lg);
+  min-height: clamp(220px, 25vw, 360px);
+  padding: clamp(var(--spacing-md), 3vw, var(--spacing-lg));
   background: var(--color-cream);
 }
 
@@ -45,26 +46,28 @@
 }
 
 .brand-card-info {
-  padding: var(--spacing-lg);
+  padding: clamp(var(--spacing-md), 3vw, var(--spacing-lg));
   flex: 1;
 }
 
 .brand-card-info h2 {
-  font-size: 2rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  font-weight: 560;
   margin-bottom: var(--spacing-sm);
 }
 
 .brand-origin {
-  font-size: 0.9rem;
+  font-size: var(--text-caption);
   font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--color-grey-mid);
   margin-bottom: var(--spacing-md);
 }
 
 .brand-tagline {
-  font-size: 1rem;
+  font-size: var(--text-body);
   line-height: 1.6;
   color: var(--color-grey-mid);
   margin: 0;
@@ -79,5 +82,9 @@
 @media (max-width: 768px) {
   .brands-grid-large {
     grid-template-columns: 1fr;
+  }
+
+  .page-subtitle {
+    font-size: var(--text-body);
   }
 }

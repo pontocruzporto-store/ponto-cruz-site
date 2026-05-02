@@ -2,57 +2,56 @@
   command = "npm run build"
   publish = "dist"
 
-# Remove trailing slashes automaticamente — opção nativa do Netlify,
-# sem criar regras de redirect manuais que conflituam com o SPA fallback
 [build.processing]
   skip_processing = false
 
 [build.processing.html]
   pretty_urls = true
 
-# ─── Canonical: força HTTPS e non-www ────────────────────────────────────────
+# Canonical host: force HTTPS, non-www, and the canonical Portuguese home.
 [[redirects]]
   from = "http://pontocruzconceptstore.pt/*"
-  to   = "https://pontocruzconceptstore.pt/:splat"
+  to = "https://pontocruzconceptstore.pt/:splat"
   status = 301
-  force  = true
+  force = true
 
 [[redirects]]
   from = "http://www.pontocruzconceptstore.pt/*"
-  to   = "https://pontocruzconceptstore.pt/:splat"
+  to = "https://pontocruzconceptstore.pt/:splat"
   status = 301
-  force  = true
+  force = true
 
 [[redirects]]
   from = "https://www.pontocruzconceptstore.pt/*"
-  to   = "https://pontocruzconceptstore.pt/:splat"
+  to = "https://pontocruzconceptstore.pt/:splat"
   status = 301
-  force  = true
+  force = true
 
-# ─── SPA fallback ─────────────────────────────────────────────────────────────
-# Os ficheiros estáticos (sitemap.xml, robots.txt, imagens) são servidos
-# diretamente pelo Netlify ANTES de qualquer regra de redirect.
-# NÃO adicionar regras force=true para ficheiros estáticos — cria loops.
 [[redirects]]
-  from   = "/*"
-  to     = "/404.html"
+  from = "/"
+  to = "/pt"
+  status = 301
+
+# Unknown URLs should stay true 404s. Valid public routes are prerendered
+# by the build into dist/<route>/index.html before Netlify publishes.
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
   status = 404
 
-# ─── Headers de segurança ────────────────────────────────────────────────────
 [[headers]]
   for = "/*"
   [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Cache de longa duração para assets com hash (JS, CSS)
 [[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Cache de 30 dias para imagens
 [[headers]]
   for = "/images/*"
   [headers.values]

@@ -127,6 +127,7 @@ const Contact = () => {
                     name="name"
                     value={formState.name}
                     onChange={handleChange}
+                    autoComplete="name"
                     required
                   />
                 </div>
@@ -139,6 +140,7 @@ const Contact = () => {
                     name="email"
                     value={formState.email}
                     onChange={handleChange}
+                    autoComplete="email"
                     required
                   />
                 </div>

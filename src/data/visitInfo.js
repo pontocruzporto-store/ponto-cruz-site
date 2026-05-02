@@ -11,6 +11,7 @@ export default {
     "lng": -8.61350,
     "zoom": 16
   },
+  "mapQuery": "Ponto Cruz Concept Store, Rua do Arquitecto Nicolau Nasoni 11, 4050-423 Porto, Portugal",
   "translations": {
     "pt": {
       "address": "Rua Arquitecto Nicolau Nasoni, 11\n4050-423 Porto, Portugal",

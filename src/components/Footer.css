@@ -21,17 +21,17 @@
 /* Replaces .footer-section h4 — now used on <p class="footer-heading"> */
 .footer-section h4,
 .footer-heading {
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
+  font-family: var(--font-heading);
+  font-size: var(--text-caption);
   font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--color-black);
   margin-bottom: var(--spacing-sm);
 }
 
 .footer-text {
-  font-size: 0.95rem;
+  font-size: var(--text-small);
   line-height: 1.6;
   color: var(--color-grey-mid);
   margin-bottom: 0.5rem;
@@ -39,6 +39,9 @@
 }
 
 .footer-text a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   color: var(--color-grey-mid);
   transition: var(--transition);
 }
@@ -60,7 +63,10 @@
 }
 
 .footer-link {
-  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: var(--text-small);
   color: var(--color-grey-mid);
   transition: var(--transition);
 }
@@ -70,7 +76,10 @@
 }
 
 .social-link {
-  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: var(--text-small);
   color: var(--color-grey-mid);
   transition: var(--transition);
 }
@@ -86,7 +95,14 @@
 }
 
 .copyright {
-  font-size: 0.85rem;
+  font-size: var(--text-caption);
+  color: var(--color-grey-mid);
+}
+
+.copyright a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   color: var(--color-grey-mid);
 }
 

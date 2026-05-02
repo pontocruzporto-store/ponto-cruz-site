@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-section">
-            <p className="footer-heading">Quick Links</p>
+            <p className="footer-heading">{t("footer.quickLinks")}</p>
             <nav className="footer-links" aria-label="Footer navigation">
               {quickLinks.map((link) => (
                 <Link key={link.path} to={link.path} className="footer-link">
