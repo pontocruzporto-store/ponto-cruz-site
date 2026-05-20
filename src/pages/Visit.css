@@ -1,13 +1,20 @@
 .visit-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
-  gap: clamp(var(--spacing-lg), 5vw, var(--spacing-2xl));
+  grid-template-columns: 1fr;    /* mobile: stacked */
+  gap: var(--spacing-lg);
   align-items: start;
+}
+
+@media (min-width: 968px) {
+  .visit-grid {
+    grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+    gap: clamp(var(--spacing-lg), 5vw, var(--spacing-2xl));
+  }
 }
 
 .map-container {
   position: sticky;
-  top: calc(73px + var(--spacing-md));
+  top: calc(var(--nav-height) + var(--spacing-md));
   height: min(68vh, 620px);
   background: var(--color-grey-light);
   border: 1px solid var(--color-border);
@@ -45,7 +52,7 @@
 .info-card p {
   font-size: 1rem;
   line-height: 1.7;
-  color: var(--color-grey-mid);
+  color: var(--color-text-secondary);
   margin-bottom: var(--spacing-sm);
   white-space: pre-line;
 }
@@ -63,7 +70,7 @@
 .info-card li {
   font-size: 1rem;
   line-height: 1.7;
-  color: var(--color-grey-mid);
+  color: var(--color-text-secondary);
   padding-left: 1.5rem;
   position: relative;
   margin-bottom: 0.5rem;
@@ -107,15 +114,11 @@
   color: var(--color-cream);
 }
 
-@media (max-width: 968px) {
-  .visit-grid {
-    grid-template-columns: 1fr;
-  }
-
+@media (max-width: 967px) {
   .map-container {
     position: relative;
     top: 0;
-    height: 400px;
+    height: 320px;
     order: 2;
   }
 
@@ -126,5 +129,11 @@
 
   .directions-button {
     width: 100%;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 967px) {
+  .visit-info-cards {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

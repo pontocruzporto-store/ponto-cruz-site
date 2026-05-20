@@ -41,6 +41,13 @@ const Header = () => {
   ];
 
   return (
+    <>
+      <a href="#main-content" className="skip-link">
+        {language === "pt" ? "Saltar para o conteúdo" :
+         language === "en" ? "Skip to content" :
+         language === "ko" ? "본문으로 건너뛰기" :
+         "コンテンツへスキップ"}
+      </a>
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="header-container">
         <Link to={`/${language}`} className="logo">
@@ -96,6 +103,7 @@ const Header = () => {
         </div>
       </div>
     </header>
+    </>
   );
 };
 

@@ -1,7 +1,14 @@
 .contact-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: var(--spacing-2xl);
+  grid-template-columns: 1fr;    /* mobile: stacked */
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: 968px) {
+  .contact-grid {
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--spacing-2xl);
+  }
 }
 
 .contact-form-wrapper {
@@ -97,7 +104,7 @@
 .contact-info-card p {
   font-size: 1rem;
   line-height: 1.7;
-  color: var(--color-grey-mid);
+  color: var(--color-text-secondary);
   margin-bottom: 0.5rem;
   white-space: pre-line;
 }
@@ -110,8 +117,8 @@
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  color: var(--color-grey-mid);
-  transition: var(--transition);
+  color: var(--color-text-secondary);
+  transition: color var(--duration-fast) var(--ease-out);
 }
 
 .contact-info-card a:hover {
@@ -129,19 +136,14 @@
   align-items: center;
   min-height: 44px;
   font-size: var(--text-body);
-  color: var(--color-grey-mid);
-  transition: var(--transition);
+  color: var(--color-text-secondary);
+  transition: color var(--duration-fast) var(--ease-out);
 }
 
 .social-links-vertical a:hover {
   color: var(--color-black);
 }
 
-@media (max-width: 968px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 @media (max-width: 480px) {
   .contact-form-wrapper {

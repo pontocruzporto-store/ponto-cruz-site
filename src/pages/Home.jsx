@@ -34,10 +34,45 @@ const META = {
   },
 };
 
+const HERO_ALT = {
+  pt: "Interior da Ponto Cruz Concept Store no centro do Porto",
+  en: "Inside Ponto Cruz Concept Store — authentic Portuguese crafts in Porto",
+  ko: "포르투 폰토 크루즈 콘셉트 스토어 내부",
+  ja: "ポルトのコンセプトストア ポント・クルスの店内",
+};
+
 const Home = () => {
   const { language, t } = useLanguage();
   const meta = META[language] || META.pt;
   const pageUrl = `${BASE_URL}/${language}`;
+
+  // Scroll-reveal — animates .reveal and .reveal-stagger into view
+  React.useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.querySelectorAll(".reveal, .reveal-stagger").forEach((el) => {
+        el.classList.add("visible");
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    document.querySelectorAll(".reveal, .reveal-stagger").forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const featuredBrands = brandsData
     .filter((brand) => brand.featured)
@@ -48,7 +83,7 @@ const Home = () => {
   const featuredPosts = blogData.slice(0, 3);
 
   return (
-    <div className="home">
+    <div className="home" id="main-content">
       <Helmet>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
@@ -67,7 +102,7 @@ const Home = () => {
         <div className="hero-image">
           <OptimizedImage
             src="/images/hero/hero-image-1200.webp"
-            alt="Authentic Souvenir & Concept Store in Porto"
+            alt={HERO_ALT[language] || HERO_ALT.pt}
             loading="eager"
             fetchpriority="high"
             sizes="100vw"
@@ -105,7 +140,7 @@ const Home = () => {
       {/* About Preview */}
       <section className="section about-preview">
         <div className="container">
-          <div className="about-preview-grid">
+          <div className="about-preview-grid reveal">
             <div className="about-preview-image">
               <OptimizedImage
                 src="/images/hero/about-image-1200.webp"
@@ -136,7 +171,7 @@ const Home = () => {
                 {t("home.viewBrands")}
               </Link>
             </div>
-            <div className="brands-grid">
+            <div className="brands-grid reveal-stagger">
               {featuredBrands.map((brand) => (
                 <Link
                   key={brand.slug}
@@ -171,7 +206,7 @@ const Home = () => {
                 {t("home.explorePorto")}
               </Link>
             </div>
-            <div className="places-grid">
+            <div className="places-grid reveal-stagger">
               {featuredPlaces.map((place) => (
                 <div key={place.slug} className="place-card">
                   <div className="place-card-image">
@@ -208,7 +243,7 @@ const Home = () => {
                 {t("home.readBlog")}
               </Link>
             </div>
-            <div className="places-grid">
+            <div className="places-grid reveal-stagger">
               {featuredPosts.map((post) => {
                 const content = post.translations[language] || post.translations.pt;
                 return (
@@ -241,7 +276,7 @@ const Home = () => {
       {/* Visit CTA */}
       <section className="section visit-cta">
         <div className="container">
-          <div className="visit-cta-content">
+          <div className="visit-cta-content reveal">
             <h2>{t("visit.title")}</h2>
             <p>
               Rua Arquitecto Nicolau Nasoni, 11
